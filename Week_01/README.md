@@ -4,7 +4,7 @@
 
 ## 记录
 
-- 283 move-zeroes
+- 283 move-zeroes: [双指针+swap令人恼火]
   - 双指针的边界实在是太难理解了。 为什么i和j都从0开始刚好能cover住所有的场景，这是怎么想出来的。
   - 我从i=0,j=1开始考虑，就需要处理OO,OX,XO,XX这四种情况，代码非常复杂
   - i=0,j=0然后还能swap(i,j),从常理很难去这么思考，这算是技巧还是什么？
@@ -15,7 +15,7 @@
 ### Array
 | 题号 | 名称 | 难度 | 分类 | 第一掌 | 第二掌 | 第三掌 | 第四掌 | 第?掌 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| [283 move-zeroes](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=) | [移动零](https://leetcode-cn.com/problems/move-zeroes/)| 🟢 简单 | 数组 | 08.10✅  | 08.10 | 08.11 | 08.18 | - |
+| [283 move-zeroes](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=) | [移动零](https://leetcode-cn.com/problems/move-zeroes/)| 🟢 简单 | 数组 | 08.10✅  | 08.10✅  | 08.11 | 08.18 | - |
 | [70 climbing-stairs](https://leetcode.com/problems/climbing-stairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)| 🟢 简单 | 数组 | 08.10 | 08.10 | 08.11 | 08.18 | - |
 | [15 3sum](https://leetcode.com/problems/3sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [三数之和](https://leetcode-cn.com/problems/3sum/)| 🟡 中等 | 数组 | 08.10 | 08.10 | 08.11 | 08.18 | - |
 | [11 container-with-most-water](https://leetcode.com/problems/container-with-most-water/discuss/?currentPage=1&orderBy=most_votes&query=) | [盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)| 🟡 中等 | 数组 | 08.10 | 08.10 | 08.11 | 08.18 | - |
