@@ -1,6 +1,30 @@
 学习笔记
 
 
+# 讲义练习题
+
+## Array
+1. https://leetcode-cn.com/problems/container-with-most-water/ 
+1. https://leetcode-cn.com/problems/move-zeroes/
+1. https://leetcode-cn.com/problems/climbing-stairs/ 
+1.https://leetcode-cn.com/problems/3sum/ (高频老题)
+
+## Linked List
+1. https://leetcode-cn.com/problems/reverse-linked-list/
+1. https://leetcode-cn.com/problems/swap-nodes-in-pairs
+1. https://leetcode-cn.com/problems/linked-list-cycle
+1. https://leetcode-cn.com/problems/linked-list-cycle-ii
+1. https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
+
+## Homework
+1. https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ 
+1. https://leetcode-cn.com/problems/rotate-array/
+1. https://leetcode-cn.com/problems/merge-two-sorted-lists/
+1. https://leetcode-cn.com/problems/merge-sorted-array/
+1. https://leetcode-cn.com/problems/two-sum/
+1. https://leetcode-cn.com/problems/move-zeroes/ 
+1. https://leetcode-cn.com/problems/plus-one/
+
 # 课程表
 
 ## 第一周
