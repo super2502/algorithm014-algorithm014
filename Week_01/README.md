@@ -73,7 +73,7 @@
 ### stack and queue
 1. https://leetcode-cn.com/problems/valid-parentheses/ - 最近相关性 —> 栈!
 1. https://leetcode-cn.com/problems/min-stack/
-1. https://leetcode-cn.com/problems/largest-rectangle-in- histogram
+1. https://leetcode-cn.com/problems/largest-rectangle-in-histogram
 1. https://leetcode-cn.com/problems/sliding-window-maximum
 
 ### Homework
