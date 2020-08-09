@@ -7,7 +7,7 @@
 1. https://leetcode-cn.com/problems/container-with-most-water/ 
 1. https://leetcode-cn.com/problems/move-zeroes/
 1. https://leetcode-cn.com/problems/climbing-stairs/ 
-1.https://leetcode-cn.com/problems/3sum/ (高频老题)
+1. https://leetcode-cn.com/problems/3sum/ (高频老题)
 
 ## Linked List
 1. https://leetcode-cn.com/problems/reverse-linked-list/
