@@ -1,6 +1,5 @@
 package Day1
 
-
 import (
 	"fmt"
 	"testing"

@@ -5,13 +5,14 @@ func moveZeroes(nums []int) {
 	if l <= 1 {
 		return
 	}
-	i := 0
-	j := 0
-	for j < l {
-		if nums[j] != 0 {
-			nums[i], nums[j] = nums[j], nums[i]
-			i++
+	idx := 0
+	for i := 0; i < l; i++ {
+		if nums[i] != 0 {
+			nums[idx] = nums[i]
+			idx++
 		}
-		j++
+	}
+	for i := idx; i < l; i++ {
+		nums[i] = 0
 	}
 }
