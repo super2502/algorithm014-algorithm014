@@ -10,6 +10,8 @@
   - i=0,j=0然后还能swap(i,j),从常理很难去这么思考，这算是技巧还是什么？
   - 刻意使用swap在不熟练的时候非常难以理解
   - 比较朴素的遍历思想更清晰，实际上用于记录非零的指针就是第二个指针
+- 1 two-sum
+  - 注意没有排序，不能直接用双指针夹逼，一上来就错了，双指针一定是要处理排过序的 
 
 
 ## 五毒神掌 [偷笑]
@@ -48,7 +50,7 @@
 | [189 rotate-array](https://leetcode.com/problems/rotate-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [旋转数组](https://leetcode-cn.com/problems/rotate-array/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.12 | 08.13 | 08.20 | - |
 | [21 merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅  | 08.13 | 08.14 | 08.21 | - |
 | [88 merge-sorted-array](https://leetcode.com/problems/merge-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅  | 08.13 | 08.14 | 08.21 | - |
-| [1 two-sum](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [两数之和](https://leetcode-cn.com/problems/two-sum/)| 🟢 简单 | 数组、链表、跳表 | 08.10 | 08.10 | 08.11 | 08.18 | - |
+| [1 two-sum](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [两数之和](https://leetcode-cn.com/problems/two-sum/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.12 | 08.13 | 08.20 | - |
 | [283 move-zeroes](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=) | [移动零](https://leetcode-cn.com/problems/move-zeroes/)| 🟢 简单 | 数组、链表、跳表 | 08.10 | 08.10 | 08.11 | 08.18 | - |
 | [66 plus-one](https://leetcode.com/problems/plus-one/discuss/?currentPage=1&orderBy=most_votes&query=) | [加一](https://leetcode-cn.com/problems/plus-one/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.13 | 08.14 | 08.21 | - |
 | [641 design-circular-deque](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) | [设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)| 🟡 中等 | 栈、队列 | 08.10 | 08.10 | 08.11 | 08.18 | - |
