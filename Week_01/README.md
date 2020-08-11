@@ -12,6 +12,8 @@
   - 比较朴素的遍历思想更清晰，实际上用于记录非零的指针就是第二个指针
 - 1 two-sum
   - 注意没有排序，不能直接用双指针夹逼，一上来就错了，双指针一定是要处理排过序的 
+- 641 design-circular-deque
+  - 不就是LRU的前置，使劲做LRU就好了
 
 
 ## 五毒神掌 [偷笑]
@@ -53,7 +55,7 @@
 | [1 two-sum](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [两数之和](https://leetcode-cn.com/problems/two-sum/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.12 | 08.13 | 08.20 | - |
 | [283 move-zeroes](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=) | [移动零](https://leetcode-cn.com/problems/move-zeroes/)| 🟢 简单 | 数组、链表、跳表 | 08.10 | 08.10 | 08.11 | 08.18 | - |
 | [66 plus-one](https://leetcode.com/problems/plus-one/discuss/?currentPage=1&orderBy=most_votes&query=) | [加一](https://leetcode-cn.com/problems/plus-one/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.13 | 08.14 | 08.21 | - |
-| [641 design-circular-deque](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) | [设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)| 🟡 中等 | 栈、队列 | 08.10 | 08.10 | 08.11 | 08.18 | - |
+| [641 design-circular-deque](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) | [设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)| 🟡 中等 | 栈、队列 | 08.11✅  | 08.13 | 08.14 | 08.21 | - |
 | [42 trapping-rain-water](https://leetcode.com/problems/trapping-rain-water/discuss/?currentPage=1&orderBy=most_votes&query=) | [接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)| 🔴️ 困难 | 栈、队列 | 08.10 | 08.10 | 08.11 | 08.18 | - |
 
 
