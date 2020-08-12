@@ -16,7 +16,8 @@
   - 不就是LRU的前置，使劲做LRU就好了
 - 15 3sum
   - 使用双指针处理twosum子问题时，两端去重不熟练，判定条件是 左指针只要next和当前相等，就往下++， 之后再++一次进入下一个循环，右方向同理
-
+- 142 linked-list-cycle-ii
+  - 要使用快慢指针的方法，一定是要slow从head.Next fast从head.Next.Next出发，如果 slow从head，fast从head.Next出发，虽然会相遇，但之后再进行等速指针时就永远也遇不上了
 
 ## 五毒神掌 [偷笑]
 
