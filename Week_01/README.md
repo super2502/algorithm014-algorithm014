@@ -33,8 +33,10 @@
     - head和rear减少时 用 (x+k) 对(k+1)求模 
 - 15 3sum
   - 使用双指针处理twosum子问题时，两端去重不熟练，判定条件是 左指针只要next和当前相等，就往下++， 之后再++一次进入下一个循环，右方向同理
+  - 细节要点： 排序和去重
 - 142 linked-list-cycle-ii
   - 要使用快慢指针的方法，一定是要slow从head.Next fast从head.Next.Next出发，如果 slow从head，fast从head.Next出发，虽然会相遇，但之后再进行等速指针时就永远也遇不上了
+  - 细节要点：如上
 - 42 trapping-rain-water
   - 用自己的理解实现了一版，还不太能理解栈的解法
     - 双指针解法，先找到两侧最高，其外的不会存水
