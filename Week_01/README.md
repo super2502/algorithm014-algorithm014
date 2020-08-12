@@ -14,6 +14,8 @@
   - 注意没有排序，不能直接用双指针夹逼，一上来就错了，双指针一定是要处理排过序的 
 - 641 design-circular-deque
   - 不就是LRU的前置，使劲做LRU就好了
+- 15 3sum
+  - 使用双指针处理twosum子问题时，两端去重不熟练，判定条件是 左指针只要next和当前相等，就往下++， 之后再++一次进入下一个循环，右方向同理
 
 
 ## 五毒神掌 [偷笑]
@@ -23,7 +25,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | [283 move-zeroes](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=) | [移动零](https://leetcode-cn.com/problems/move-zeroes/)| 🟢 简单 | 数组 | 08.10✅  | 08.10✅  | 08.11✅  | 08.18 | - |
 | [70 climbing-stairs](https://leetcode.com/problems/climbing-stairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)| 🟢 简单 | 数组 | 08.10✅  | 08.10✅  | 08.12✅  | 08.19 | - |
-| [15 3sum](https://leetcode.com/problems/3sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [三数之和](https://leetcode-cn.com/problems/3sum/)| 🟡 中等 | 数组 | 08.10✅  | 08.12 | 08.13 | 08.20 | - |
+| [15 3sum](https://leetcode.com/problems/3sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [三数之和](https://leetcode-cn.com/problems/3sum/)| 🟡 中等 | 数组 | 08.10✅  | 08.12✅  | 08.13 | 08.20 | - |
 | [11 container-with-most-water](https://leetcode.com/problems/container-with-most-water/discuss/?currentPage=1&orderBy=most_votes&query=) | [盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)| 🟡 中等 | 数组 | 08.10✅  | 08.10✅  | 08.12 | 08.19 | - |
 
 
