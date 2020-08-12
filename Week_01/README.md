@@ -15,6 +15,11 @@
 - 641 design-circular-deque
   - 不就是LRU的前置，使劲做LRU就好了
   - 理解的有问题，好像不是一个东西
+  - 用数组实现了一版，关键只要记住 head和rear的模型
+    - arr长度要定义为k+1
+    - 计算IsFull时 (rear+1) % (k+1) == head
+    - head和rear增加时 对(k+1)求模
+    - head和rear减少时 用 (x+k) 对(k+1)求模 
 - 15 3sum
   - 使用双指针处理twosum子问题时，两端去重不熟练，判定条件是 左指针只要next和当前相等，就往下++， 之后再++一次进入下一个循环，右方向同理
 - 142 linked-list-cycle-ii
@@ -59,7 +64,7 @@
 | [1 two-sum](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [两数之和](https://leetcode-cn.com/problems/two-sum/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.12✅ | 08.15 | 08.22 | - |
 | [283 move-zeroes](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=) | [移动零](https://leetcode-cn.com/problems/move-zeroes/)| 🟢 简单 | 数组、链表、跳表 | 08.10 | 08.10 | 08.11 | 08.18 | - |
 | [66 plus-one](https://leetcode.com/problems/plus-one/discuss/?currentPage=1&orderBy=most_votes&query=) | [加一](https://leetcode-cn.com/problems/plus-one/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.13✅  | 08.14 | 08.21 | - |
-| [641 design-circular-deque](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) | [设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)| 🟡 中等 | 栈、队列 | 08.11✅  | 08.13 | 08.14 | 08.21 | - |
+| [641 design-circular-deque](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) | [设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)| 🟡 中等 | 栈、队列 | 08.11✅  | 08.13✅  | 08.14 | 08.21 | - |
 | [42 trapping-rain-water](https://leetcode.com/problems/trapping-rain-water/discuss/?currentPage=1&orderBy=most_votes&query=) | [接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)| 🔴️ 困难 | 栈、队列 | 08.12✅ | 08.13 | 08.14 | 08.21 | - |
 
 
