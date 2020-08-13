@@ -8,6 +8,8 @@ import (
 
 )
 
+var _ = fmt.Errorf("")
+
 type N struct {
 	Val int
 	Next *N
@@ -78,11 +80,11 @@ func TestRevK(t *testing.T) {
 
 	//PrintN(preHead.Next, t)
 
-	//revN := RevK(preHead.Next, 3)
+	revN := RevK(preHead.Next, 4)
 
-	revN := revert(preHead.Next, 9)
+	//revN := revert(preHead.Next, 9)
 	var _ = revN
-	//PrintN(revN, t)
+	PrintN(revN, t)
 
 }
 
@@ -118,19 +120,19 @@ func RevK(head *N, k int ) *N{
 
 func revert(head *N, k int) (*N){
 
-	pre := &N{}
+	var pre *N
 	cur := head
 
 	for i :=0 ; i<k ;i++ {
-		fmt.Printf("1.pre (%v) cur (%v)\n", pre.Val, cur.Val)
-		node := cur
-		fmt.Printf("2.pre (%v) cur (%v) node (%v)\n", pre.Val, cur.Val, node.Next.Val)
+		//fmt.Printf("1.pre (%v) cur (%v)\n", pre.Val, cur.Val)
+		node := cur.Next
+		//fmt.Printf("2.pre (%v) cur (%v) node (%v)\n", pre.Val, cur.Val, node.Next.Val)
 		cur.Next = pre
-		fmt.Printf("3.pre (%v) cur (%v)\n", pre.Val, cur.Val)
+		//fmt.Printf("3.pre (%v) cur (%v)\n", pre.Val, cur.Val)
 		pre = cur
-		fmt.Printf("4.pre (%v) cur (%v)\n", pre.Val, cur.Val)
-		cur = node.Next
-		fmt.Printf("5.pre (%v) cur (%v)\n", pre.Val, cur.Val)
+		//fmt.Printf("4.pre (%v) cur (%v)\n", pre.Val, cur.Val)
+		cur = node
+		//fmt.Printf("5.pre (%v) cur (%v)\n", pre.Val, cur.Val)
 	}
 
 	return pre
