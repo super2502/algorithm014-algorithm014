@@ -62,7 +62,7 @@
 | [24 swap-nodes-in-pairs](https://leetcode.com/problems/swap-nodes-in-pairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)| 🟡 中等 | 链表 | 08.10✅ | 08.12✅  | 08.13 | 08.20 | - |
 | [141 linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/discuss/?currentPage=1&orderBy=most_votes&query=) | [环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)| 🟢 简单 | 链表 |08.10✅ | 08.12✅  | 08.13 | 08.20 | - |
 | [142 linked-list-cycle-ii](https://leetcode.com/problems/linked-list-cycle-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)| 🟡 中等 | 链表 | 08.10✅  | 08.12✅  | 08.13 | 08.20 | - |
-| [25 reverse-nodes-in-k-group](https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/?currentPage=1&orderBy=most_votes&query=) | [K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)| 🔴️ 困难 | 链表 | 08.13 | 08.13 | 08.14 | 08.21 | - |
+| [25 reverse-nodes-in-k-group](https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/?currentPage=1&orderBy=most_votes&query=) | [K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)| 🔴️ 困难 | 链表 | 08.13✅  | 08.14 | 08.15 | 08.21 | - |
 
 ### Stack & Queue
 | 题号 | 名称 | 难度 | 分类 | 第一掌 | 第二掌 | 第三掌 | 第四掌 | 第?掌 |
