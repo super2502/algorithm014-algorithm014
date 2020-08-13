@@ -2,6 +2,16 @@
 
 # 第一周
 
+## 弱项
+
+- 从同一侧触发的双指针，非常难搞清楚起点的边界条件
+- 单调栈，接触太少，不熟悉用法，为什么用以及到底是用递增还是递减的都还没搞清楚
+
+## 随笔
+
+- 什么问题用栈求解？ - 看起来像剥洋葱的问题。。。
+
+
 ## 记录
 
 - 283 move-zeroes: [双指针+swap令人恼火]
@@ -12,9 +22,26 @@
   - 比较朴素的遍历思想更清晰，实际上用于记录非零的指针就是第二个指针
 - 1 two-sum
   - 注意没有排序，不能直接用双指针夹逼，一上来就错了，双指针一定是要处理排过序的 
+  - 双指针求和才是需要排过序的
 - 641 design-circular-deque
   - 不就是LRU的前置，使劲做LRU就好了
-
+  - 理解的有问题，好像不是一个东西
+  - 用数组实现了一版，关键只要记住 head和rear的模型
+    - arr长度要定义为k+1
+    - 计算IsFull时 (rear+1) % (k+1) == head
+    - head和rear增加时 对(k+1)求模
+    - head和rear减少时 用 (x+k) 对(k+1)求模 
+- 15 3sum
+  - 使用双指针处理twosum子问题时，两端去重不熟练，判定条件是 左指针只要next和当前相等，就往下++， 之后再++一次进入下一个循环，右方向同理
+  - 细节要点： 排序和去重
+- 142 linked-list-cycle-ii
+  - 要使用快慢指针的方法，一定是要slow从head.Next fast从head.Next.Next出发，如果 slow从head，fast从head.Next出发，虽然会相遇，但之后再进行等速指针时就永远也遇不上了
+  - 细节要点：如上
+- 42 trapping-rain-water
+  - 用自己的理解实现了一版，还不太能理解栈的解法
+    - 双指针解法，先找到两侧最高，其外的不会存水
+    - 从低的一侧向中间推进，遇到低的就加水，遇到高的，指针跳过去
+    - 循环上一条直到两指针相遇
 
 ## 五毒神掌 [偷笑]
 
@@ -22,19 +49,19 @@
 | 题号 | 名称 | 难度 | 分类 | 第一掌 | 第二掌 | 第三掌 | 第四掌 | 第?掌 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | [283 move-zeroes](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=) | [移动零](https://leetcode-cn.com/problems/move-zeroes/)| 🟢 简单 | 数组 | 08.10✅  | 08.10✅  | 08.11✅  | 08.18 | - |
-| [70 climbing-stairs](https://leetcode.com/problems/climbing-stairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)| 🟢 简单 | 数组 | 08.10✅  | 08.10✅  | 08.12 | 08.19 | - |
-| [15 3sum](https://leetcode.com/problems/3sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [三数之和](https://leetcode-cn.com/problems/3sum/)| 🟡 中等 | 数组 | 08.10✅  | 08.12 | 08.13 | 08.20 | - |
-| [11 container-with-most-water](https://leetcode.com/problems/container-with-most-water/discuss/?currentPage=1&orderBy=most_votes&query=) | [盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)| 🟡 中等 | 数组 | 08.10✅  | 08.10✅  | 08.12 | 08.19 | - |
+| [70 climbing-stairs](https://leetcode.com/problems/climbing-stairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)| 🟢 简单 | 数组 | 08.10✅  | 08.10✅  | 08.12✅  | 08.19 | - |
+| [15 3sum](https://leetcode.com/problems/3sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [三数之和](https://leetcode-cn.com/problems/3sum/)| 🟡 中等 | 数组 | 08.10✅  | 08.12✅  | 08.13 | 08.20 | - |
+| [11 container-with-most-water](https://leetcode.com/problems/container-with-most-water/discuss/?currentPage=1&orderBy=most_votes&query=) | [盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)| 🟡 中等 | 数组 | 08.10✅  | 08.10✅  | 08.12✅ | 08.19 | - |
 
 
 ### Linked list
 | 题号 | 名称 | 难度 | 分类 | 第一掌 | 第二掌 | 第三掌 | 第四掌 | 第?掌 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| [146 lru-cache](https://leetcode.com/problems/lru-cache/discuss/?currentPage=1&orderBy=most_votes&query=) | [LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)| 🟡 中等 | 链表 | 08.10✅ | 08.10✅ | 08.12 | 08.19 | - |
-| [206 reverse-linked-list](https://leetcode.com/problems/reverse-linked-list/discuss/?currentPage=1&orderBy=most_votes&query=) | [反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)| 🟢 简单 | 链表 | 08.10✅  | 08.12 | 08.13 | 08.20 | - |
-| [24 swap-nodes-in-pairs](https://leetcode.com/problems/swap-nodes-in-pairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)| 🟡 中等 | 链表 | 08.10✅ | 08.12 | 08.13 | 08.20 | - |
-| [141 linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/discuss/?currentPage=1&orderBy=most_votes&query=) | [环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)| 🟢 简单 | 链表 |08.10✅ | 08.12 | 08.13 | 08.20 | - |
-| [142 linked-list-cycle-ii](https://leetcode.com/problems/linked-list-cycle-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)| 🟡 中等 | 链表 | 08.10✅  | 08.12 | 08.13 | 08.20 | - |
+| [146 lru-cache](https://leetcode.com/problems/lru-cache/discuss/?currentPage=1&orderBy=most_votes&query=) | [LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)| 🟡 中等 | 链表 | 08.10✅ | 08.10✅ | 08.12✅ | 08.19 | - |
+| [206 reverse-linked-list](https://leetcode.com/problems/reverse-linked-list/discuss/?currentPage=1&orderBy=most_votes&query=) | [反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)| 🟢 简单 | 链表 | 08.10✅  | 08.12✅  | 08.13 | 08.20 | - |
+| [24 swap-nodes-in-pairs](https://leetcode.com/problems/swap-nodes-in-pairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)| 🟡 中等 | 链表 | 08.10✅ | 08.12✅  | 08.13 | 08.20 | - |
+| [141 linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/discuss/?currentPage=1&orderBy=most_votes&query=) | [环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)| 🟢 简单 | 链表 |08.10✅ | 08.12✅  | 08.13 | 08.20 | - |
+| [142 linked-list-cycle-ii](https://leetcode.com/problems/linked-list-cycle-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)| 🟡 中等 | 链表 | 08.10✅  | 08.12✅  | 08.13 | 08.20 | - |
 | [25 reverse-nodes-in-k-group](https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/?currentPage=1&orderBy=most_votes&query=) | [K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)| 🔴️ 困难 | 链表 | 08.13 | 08.13 | 08.14 | 08.21 | - |
 
 ### Stack & Queue
@@ -48,15 +75,15 @@
 ### Homework
 | 题号 | 名称 | 难度 | 分类 | 第一掌 | 第二掌 | 第三掌 | 第四掌 | 第?掌 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| [26 remove-duplicates-from-sorted-array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)| 🟢 简单 | 数组、链表、跳表 | 08.10✅ | 08.10 | 08.11 | 08.18 | - |
-| [189 rotate-array](https://leetcode.com/problems/rotate-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [旋转数组](https://leetcode-cn.com/problems/rotate-array/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.12 | 08.13 | 08.20 | - |
-| [21 merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅  | 08.13 | 08.14 | 08.21 | - |
-| [88 merge-sorted-array](https://leetcode.com/problems/merge-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅  | 08.13 | 08.14 | 08.21 | - |
-| [1 two-sum](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [两数之和](https://leetcode-cn.com/problems/two-sum/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.12 | 08.13 | 08.20 | - |
+| [26 remove-duplicates-from-sorted-array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)| 🟢 简单 | 数组、链表、跳表 | 08.10✅ | 08.12✅  | 08.14 | 08.21 | - |
+| [189 rotate-array](https://leetcode.com/problems/rotate-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [旋转数组](https://leetcode-cn.com/problems/rotate-array/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.12✅ | 08.14 | 08.21 | - |
+| [21 merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅  | 08.13 | 08.15 | 08.22 | - |
+| [88 merge-sorted-array](https://leetcode.com/problems/merge-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅  | 08.13 | 08.15 | 08.22 | - |
+| [1 two-sum](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [两数之和](https://leetcode-cn.com/problems/two-sum/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.12✅ | 08.15 | 08.22 | - |
 | [283 move-zeroes](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=) | [移动零](https://leetcode-cn.com/problems/move-zeroes/)| 🟢 简单 | 数组、链表、跳表 | 08.10 | 08.10 | 08.11 | 08.18 | - |
-| [66 plus-one](https://leetcode.com/problems/plus-one/discuss/?currentPage=1&orderBy=most_votes&query=) | [加一](https://leetcode-cn.com/problems/plus-one/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.13 | 08.14 | 08.21 | - |
-| [641 design-circular-deque](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) | [设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)| 🟡 中等 | 栈、队列 | 08.11✅  | 08.13 | 08.14 | 08.21 | - |
-| [42 trapping-rain-water](https://leetcode.com/problems/trapping-rain-water/discuss/?currentPage=1&orderBy=most_votes&query=) | [接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)| 🔴️ 困难 | 栈、队列 | 08.10 | 08.10 | 08.11 | 08.18 | - |
+| [66 plus-one](https://leetcode.com/problems/plus-one/discuss/?currentPage=1&orderBy=most_votes&query=) | [加一](https://leetcode-cn.com/problems/plus-one/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.13✅  | 08.14 | 08.21 | - |
+| [641 design-circular-deque](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) | [设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)| 🟡 中等 | 栈、队列 | 08.11✅  | 08.13✅  | 08.14 | 08.21 | - |
+| [42 trapping-rain-water](https://leetcode.com/problems/trapping-rain-water/discuss/?currentPage=1&orderBy=most_votes&query=) | [接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)| 🔴️ 困难 | 栈、队列 | 08.12✅ | 08.13 | 08.14 | 08.21 | - |
 
 
 
