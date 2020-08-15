@@ -1,6 +1,6 @@
 # 极客大学「算法训练营-第14期」作业提交仓库
 
-![](complexity.png)
+![](/golang/complexity.png)
 
 
 ## 仓库目录结构说明
