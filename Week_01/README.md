@@ -175,39 +175,3 @@
 | [42 trapping-rain-water](https://leetcode.com/problems/trapping-rain-water/discuss/?currentPage=1&orderBy=most_votes&query=) | [接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)| 🔴️ 困难 | 栈、队列 | 08.12✅ | 08.13✅  | 08.14 | 08.21 | - |
 
 
-
-## 讲义练习题
-
-### Array
-1. https://leetcode-cn.com/problems/container-with-most-water/ 
-1. https://leetcode-cn.com/problems/move-zeroes/
-1. https://leetcode-cn.com/problems/climbing-stairs/ 
-1. https://leetcode-cn.com/problems/3sum/ (高频老题)
-
-### Linked List
-1. https://leetcode-cn.com/problems/reverse-linked-list/
-1. https://leetcode-cn.com/problems/swap-nodes-in-pairs
-1. https://leetcode-cn.com/problems/linked-list-cycle
-1. https://leetcode-cn.com/problems/linked-list-cycle-ii
-1. https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
-
-### Homework
-1. https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ 
-1. https://leetcode-cn.com/problems/rotate-array/
-1. https://leetcode-cn.com/problems/merge-two-sorted-lists/
-1. https://leetcode-cn.com/problems/merge-sorted-array/
-1. https://leetcode-cn.com/problems/two-sum/
-1. https://leetcode-cn.com/problems/move-zeroes/ 
-1. https://leetcode-cn.com/problems/plus-one/
-
-### stack and queue
-1. https://leetcode-cn.com/problems/valid-parentheses/ - 最近相关性 —> 栈!
-1. https://leetcode-cn.com/problems/min-stack/
-1. https://leetcode-cn.com/problems/largest-rectangle-in-histogram
-1. https://leetcode-cn.com/problems/sliding-window-maximum
-
-### Homework
-1. https://leetcode.com/problems/design-circular-deque 
-1. https://leetcode.com/problems/trapping-rain-water/
-
-
