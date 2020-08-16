@@ -20,6 +20,8 @@
   - 切记，栈要反着用，比如前序遍历，入栈的顺序是  right，left，root，  中序遍历  right，root，left
   - n叉树的children一样要倒着遍历入栈
   
+- 使用queue
+  - 应该用跟java一样的api， 入队列 add(node)/offer(node), 出队列 remove()/poll(), 看队首 element()/peek()
   
 ## 练习记录
 
