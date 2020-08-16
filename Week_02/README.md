@@ -22,8 +22,8 @@
 ### 实战
 | 题号 | 名称 | 难度 | 分类 | 备注 | #1 | #2 | #3 | #4 | #5 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [226 invert-binary-tree](https://leetcode.com/problems/invert-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)| 🟢 简单 | 泛型递归、树的递归 | - | | | | | |
-| [98 validate-binary-search-tree](https://leetcode.com/problems/validate-binary-search-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)| 🟡 中等 | 泛型递归、树的递归 | - | | | | | |
+| [226 invert-binary-tree](https://leetcode.com/problems/invert-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)| 🟢 简单 | 泛型递归、树的递归 | - |8.16✅  | | | | |
+| [98 validate-binary-search-tree](https://leetcode.com/problems/validate-binary-search-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)| 🟡 中等 | 泛型递归、树的递归 | - |8.16✅  | | | | |
 | [104 maximum-depth-of-binary-tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)| 🟢 简单 | 泛型递归、树的递归 | - | | | | | |
 | [111 minimum-depth-of-binary-tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)| 🟢 简单 | 泛型递归、树的递归 | - | | | | | |
 | [297 serialize-and-deserialize-binary-tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)| 🔴️ 困难 | 泛型递归、树的递归 | - | | | | | |
