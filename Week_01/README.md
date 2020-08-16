@@ -119,6 +119,7 @@
     - 计算IsFull时 (rear+1) % (k+1) == head
     - head和rear增加时 对(k+1)求模
     - head和rear减少时 用 (x+k) 对(k+1)求模 
+    - 二刷发现了一个遗漏点， rear的上一个才是尾元素，一刷莫名其妙写对了根本就没记住
   - 加了一个点： rear取值的时候要找rear-1的位置的，rear本身是个空
 - 15 3sum
   - 使用双指针处理twosum子问题时，两端去重不熟练，判定条件是 左指针只要next和当前相等，就往下++， 之后再++一次进入下一个循环，右方向同理
@@ -158,13 +159,13 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | [20 valid-parentheses](https://leetcode.com/problems/valid-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)| 🟢 简单 | 栈、队列 | 08.10✅ | 08.12✅  | 08.13 | 08.20 | - |
 | [155 min-stack](https://leetcode.com/problems/min-stack/discuss/?currentPage=1&orderBy=most_votes&query=) | [最小栈](https://leetcode-cn.com/problems/min-stack/)| 🟢 简单 | 栈、队列 | 08.10✅  | 08.12✅  | 08.13 | 08.20 | - |
-| [84 largest-rectangle-in-histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/?currentPage=1&orderBy=most_votes&query=) | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)| 🔴️ 困难 | 栈、队列 | 08.13 | 08.13 | 08.14 | 08.21 | - |
+| [84 largest-rectangle-in-histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/?currentPage=1&orderBy=most_votes&query=) | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)| 🔴️ 困难 | 栈、队列 | 08.13✅ | 08.13 | 08.14 | 08.21 | - |
 | [239 sliding-window-maximum](https://leetcode.com/problems/sliding-window-maximum/discuss/?currentPage=1&orderBy=most_votes&query=) | [滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)| 🔴️ 困难 | 栈、队列 | 08.10✅  | 08.12 | 08.13 | 08.20 | - |
 
 ### Homework
 | 题号 | 名称 | 难度 | 分类 | 第一掌 | 第二掌 | 第三掌 | 第四掌 | 第?掌 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| [26 remove-duplicates-from-sorted-array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)| 🟢 简单 | 数组、链表、跳表 | 08.10✅ | 08.12✅  | 08.14 | 08.21 | - |
+| [26 remove-duplicates-from-sorted-array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)| 🟢 简单 | 数组、链表、跳表 | 08.10✅ | 08.12✅  | 08.14✅  | 08.21 | - |
 | [189 rotate-array](https://leetcode.com/problems/rotate-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [旋转数组](https://leetcode-cn.com/problems/rotate-array/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.12✅ | 08.14✅  | 08.21 | - |
 | [21 merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅  | 08.13✅  | 08.15✅  | 08.22 | - |
 | [88 merge-sorted-array](https://leetcode.com/problems/merge-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅  | 08.13✅  | 08.15✅  | 08.22 | - |
@@ -173,41 +174,5 @@
 | [66 plus-one](https://leetcode.com/problems/plus-one/discuss/?currentPage=1&orderBy=most_votes&query=) | [加一](https://leetcode-cn.com/problems/plus-one/)| 🟢 简单 | 数组、链表、跳表 | 08.11✅ | 08.13✅  | 08.14✅  | 08.21 | - |
 | [641 design-circular-deque](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) | [设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)| 🟡 中等 | 栈、队列 | 08.11✅  | 08.13✅  | 08.14✅  | 08.21 | - |
 | [42 trapping-rain-water](https://leetcode.com/problems/trapping-rain-water/discuss/?currentPage=1&orderBy=most_votes&query=) | [接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)| 🔴️ 困难 | 栈、队列 | 08.12✅ | 08.13✅  | 08.14 | 08.21 | - |
-
-
-
-## 讲义练习题
-
-### Array
-1. https://leetcode-cn.com/problems/container-with-most-water/ 
-1. https://leetcode-cn.com/problems/move-zeroes/
-1. https://leetcode-cn.com/problems/climbing-stairs/ 
-1. https://leetcode-cn.com/problems/3sum/ (高频老题)
-
-### Linked List
-1. https://leetcode-cn.com/problems/reverse-linked-list/
-1. https://leetcode-cn.com/problems/swap-nodes-in-pairs
-1. https://leetcode-cn.com/problems/linked-list-cycle
-1. https://leetcode-cn.com/problems/linked-list-cycle-ii
-1. https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
-
-### Homework
-1. https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ 
-1. https://leetcode-cn.com/problems/rotate-array/
-1. https://leetcode-cn.com/problems/merge-two-sorted-lists/
-1. https://leetcode-cn.com/problems/merge-sorted-array/
-1. https://leetcode-cn.com/problems/two-sum/
-1. https://leetcode-cn.com/problems/move-zeroes/ 
-1. https://leetcode-cn.com/problems/plus-one/
-
-### stack and queue
-1. https://leetcode-cn.com/problems/valid-parentheses/ - 最近相关性 —> 栈!
-1. https://leetcode-cn.com/problems/min-stack/
-1. https://leetcode-cn.com/problems/largest-rectangle-in-histogram
-1. https://leetcode-cn.com/problems/sliding-window-maximum
-
-### Homework
-1. https://leetcode.com/problems/design-circular-deque 
-1. https://leetcode.com/problems/trapping-rain-water/
 
 
