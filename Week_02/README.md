@@ -15,6 +15,10 @@
   - 能理解遍历模板和遍历过程
   - 但是， 只要在遍历过程中有数据比较的过程，就完全无法理解了，什么是上一个数据？？？从哪儿归来的？？
     - 显式的指定返回值可能会好一点。
+- 关于树的迭代遍历，不管是几叉树都是一样的
+  - 套用模板，使用栈和涂色node
+  - 切记，栈要反着用，比如前序遍历，入栈的顺序是  right，left，root，  中序遍历  right，root，left
+  - n叉树的children一样要倒着遍历入栈
   
   
 ## 练习记录
@@ -34,8 +38,8 @@
 | [242 valid-anagram](https://leetcode.com/problems/valid-anagram/discuss/?currentPage=1&orderBy=most_votes&query=) | [有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)| 🟢 简单 | 哈希表、映射、集合 | ⭐️ 也是实战题目 | 8.16✅  |8.17 |8.18 | 8.25| |
 | [49 group-anagrams](https://leetcode.com/problems/group-anagrams/discuss/?currentPage=1&orderBy=most_votes&query=) | [字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)| 🟡 中等 | 哈希表、映射、集合 | ⭐️ 也是实战题目 | 8.16✅ |8.17 | 8.18|8.25 | |
 | [1 two-sum](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [两数之和](https://leetcode-cn.com/problems/two-sum/)| 🟢 简单 | 哈希表、映射、集合 | ⭐️ 也是实战题目 |8.16✅  | 8.17| 8.18|8.25 | |
-| [94 binary-tree-inorder-traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)| 🟡 中等 | 树、二叉树、二叉搜索树 | ⭐️ 也是实战题目 | | | | | |
-| [144 binary-tree-preorder-traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)| 🟡 中等 | 树、二叉树、二叉搜索树 | ⭐️ 也是实战题目 | | | | | |
+| [94 binary-tree-inorder-traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)| 🟡 中等 | 树、二叉树、二叉搜索树 | ⭐️ 也是实战题目 | ✅| | | | |
+| [144 binary-tree-preorder-traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)| 🟡 中等 | 树、二叉树、二叉搜索树 | ⭐️ 也是实战题目 | ✅| | | | |
 | [590 n-ary-tree-postorder-traversal](https://leetcode.com/problems/n-ary-tree-postorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [N叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/)| 🟢 简单 | 树、二叉树、二叉搜索树 | ⭐️ 也是实战题目 |8.16✅|8.16✅ |8.17|8.24| |
 | [589 n-ary-tree-preorder-traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [N叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/)| 🟢 简单 | 树、二叉树、二叉搜索树 | ⭐️ 也是实战题目 | 8.16✅|8.16✅| 8.17|8.24| |
 | [429 n-ary-tree-level-order-traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [N叉树的层序遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/)| 🟡 中等 | 树、二叉树、二叉搜索树 | ⭐️ 也是实战题目 | | | | | |
