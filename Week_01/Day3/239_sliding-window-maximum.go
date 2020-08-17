@@ -4,7 +4,7 @@ import (
 	"container/list"
 )
 
-func maxSlidingWindow(nums []int, k int) []int {
+func maxSlidingWindow1(nums []int, k int) []int {
 
 	ret := make([]int, 0)
 	deque := list.New()
