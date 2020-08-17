@@ -42,6 +42,7 @@ func postorder(root *Node) []int {
 		if n.Node == nil {
 			continue
 		}
+
 		if n.Color == white {
 			n.Color = gary
 			s.push(n)
