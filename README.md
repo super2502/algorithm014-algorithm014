@@ -1,10 +1,12 @@
 # 极客大学「算法训练营-第14期」作业提交仓库
 
 ## 一周明显遗忘以及不熟题目
+- lru用golang自带的list反而不熟练
 
 | 题号 | 名称 | 难度 | 分类 | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [15 3sum](https://leetcode.com/problems/3sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [三数之和](https://leetcode-cn.com/problems/3sum/)| 🟡 中等 | 数组 | 08.10✅  | 08.12✅  | 08.13✅  | 08.20✅  | - | - | - | - |
+| [146 lru-cache](https://leetcode.com/problems/lru-cache/discuss/?currentPage=1&orderBy=most_votes&query=) | [LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)| 🟡 中等 | 链表 | 08.10✅ | 08.10✅ | 08.12✅ | 08.21✅  | - |- | - | - |
 
 ![](./complexity.png)
 
