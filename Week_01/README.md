@@ -155,15 +155,15 @@
 | [24 swap-nodes-in-pairs](https://leetcode.com/problems/swap-nodes-in-pairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)| 🟡 中等 | 链表 | 08.10✅ | 08.12✅  | 08.13✅   | 08.20✅  | - |
 | [141 linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/discuss/?currentPage=1&orderBy=most_votes&query=) | [环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)| 🟢 简单 | 链表 |08.10✅ | 08.12✅  | 08.13✅  | 08.20✅  | - |
 | [142 linked-list-cycle-ii](https://leetcode.com/problems/linked-list-cycle-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)| 🟡 中等 | 链表 | 08.10✅  | 08.12✅  | 08.13✅  | 08.20✅  | - |
-| [25 reverse-nodes-in-k-group](https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/?currentPage=1&orderBy=most_votes&query=) | [K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)| 🔴️ 困难 | 链表 | 08.13✅  | 08.14✅ | 08.15✅ | 08.21 | - |
+| [25 reverse-nodes-in-k-group](https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/?currentPage=1&orderBy=most_votes&query=) | [K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)| 🔴️ 困难 | 链表 | 08.13✅  | 08.14✅ | 08.15✅ | 08.21✅  | - |
 
 ### Stack & Queue
 | 题号 | 名称 | 难度 | 分类 | #1 | #2 | #3 | #4 | #? |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| [20 valid-parentheses](https://leetcode.com/problems/valid-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)| 🟢 简单 | 栈、队列 | 08.10✅ | 08.12✅  | 08.13✅ | 08.20 | - |
-| [155 min-stack](https://leetcode.com/problems/min-stack/discuss/?currentPage=1&orderBy=most_votes&query=) | [最小栈](https://leetcode-cn.com/problems/min-stack/)| 🟢 简单 | 栈、队列 | 08.10✅  | 08.12✅  | 08.133✅  | 08.20 | - |
-| [84 largest-rectangle-in-histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/?currentPage=1&orderBy=most_votes&query=) | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)| 🔴️ 困难 | 栈、队列 | 08.13✅ | 08.13✅ | 08.14 | 08.21 | - |
-| [239 sliding-window-maximum](https://leetcode.com/problems/sliding-window-maximum/discuss/?currentPage=1&orderBy=most_votes&query=) | [滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)| 🔴️ 困难 | 栈、队列 | 08.10✅  | 08.12✅  | 08.13✅  | 08.20 | - |
+| [20 valid-parentheses](https://leetcode.com/problems/valid-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)| 🟢 简单 | 栈、队列 | 08.10✅ | 08.12✅  | 08.13✅ | 08.20✅  | - |
+| [155 min-stack](https://leetcode.com/problems/min-stack/discuss/?currentPage=1&orderBy=most_votes&query=) | [最小栈](https://leetcode-cn.com/problems/min-stack/)| 🟢 简单 | 栈、队列 | 08.10✅  | 08.12✅  | 08.13✅  | 08.20✅  | - |
+| [84 largest-rectangle-in-histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/?currentPage=1&orderBy=most_votes&query=) | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)| 🔴️ 困难 | 栈、队列 | 08.13✅ | 08.13✅ | 08.14 | 08.21✅  | - |
+| [239 sliding-window-maximum](https://leetcode.com/problems/sliding-window-maximum/discuss/?currentPage=1&orderBy=most_votes&query=) | [滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)| 🔴️ 困难 | 栈、队列 | 08.10✅  | 08.12✅  | 08.13✅  | 08.20✅  | - |
 
 ### Homework
 | 题号 | 名称 | 难度 | 分类 | #1 | #2 | #3 | #4 | #? |
