@@ -23,7 +23,7 @@ func letterCombinations(digits string) []string {
 		8: {'t', 'u', 'v'},
 		9: {'w', 'x', 'y', 'z'},
 	}
-	dfs17([]int{}, nums, []byte{})
+	_dfs17(nums, []byte{})
 	return sret
 }
 
@@ -43,5 +43,20 @@ func dfs17(path []int, nums []int, ret []byte) {
 		retCopy = append(retCopy, b)
 		//fmt.Printf("call next %+v (%+v)\n", path, retCopy)
 		dfs17(path, nums, retCopy)
+	}
+}
+
+func _dfs17(nums []int, ret []byte) {
+	if len(ret) == len(nums) {
+		sret = append(sret, string(ret))
+		return
+	}
+	num := nums[len(ret)]
+	bs := numChars[num]
+
+	for _, b := range bs {
+		ret = append(ret, b)
+		_dfs17(nums, ret)
+		ret = ret[:len(ret)-1]
 	}
 }
