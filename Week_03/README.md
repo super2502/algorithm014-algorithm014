@@ -1,6 +1,47 @@
 学习笔记
 
 ## 总结
+- 回溯模板实际上就是继承了递归的模板
+  - 所谓回溯，就是在遍历同层兄弟节点时，互相不要干扰，每个节点用完了path变量要把其对path的修改revert掉，以至于当前的深度遍历回来时，还是从前那个少年
+    - 因此，回溯问题最主要的就是怎么定义如何定义层，如何定义每层的元素
+    - 进而获取如何在每一层处理数据，在每一层进行剪枝，如何向下递进一层
+    - 搞清楚每层数据处理逻辑，就搞清楚了path怎么定义，怎么递进和回退
+    - 搞清楚了剪枝，最主要是结果去重，同时也简化了复杂度，这不是一个优化，是必要的环节
+    - 搞清楚了如何向下递进一层就搞清楚了递归函数怎么写，怎么入参
+    - 上面三个都搞清楚了，套用模板即可
+  - 不一定非要通过revert的方式进行兄弟间往复
+    - 也可以在每个兄弟调用前复制一份递归入参
+    - 但是通过直接修改path和revert的方式是高效的
+  - 组合问题和回溯的关系
+    - 组合问题是按照长度遍历一个集合，目标节点是每个元素i，将结果列表在第j位的所有可能作为递归树的同一层， 树的层数一般是一个小于n的值
+    - 树的第j层节点是当结果已经获取到0~j-1层数据的情况下，还可以使用的节点列表，每层的可用节点列表和已经排出来的层是有关的， 这一点和排列是相同的
+    - 组合问题与排列问题不同的是，每层可以选择的元素不仅和其自身path(即根节点过来的路径)有关，还和其兄弟有关，其兄弟也是每个节点需要排除的
+      - 因此组合问题剪枝，不但要剪父子关系，还要剪兄弟关系
+      - 一个模板方法就是，每层递归向下传递当前i所在的位置，而下层递归在遍历集合时，从i开始，就可以简单的过滤掉所有兄弟了
+      - 举个例子，遍历1，2，3，4，5， 1向下递归时传2， 下层递归只会看2，3，4，5； 2向下递归传3， 下层递归只会看3，4，5； 3向下递归传4，下层递归只会看5
+      - 因此，组合还可以从后边剪枝，就是剩下的元素不够结果所需的剩下的个数时，可以直接剪掉了， 比如 3向下传递4，只会有个5， 那么如果剩下的需求大于1个的话，这只有一个5可选的路径肯定就不能用了
+    - path里放置处理结果，也要将当前元素的索引向下传，以通知下层元素不必再选择该索引之前的值
+    - 结果就是集合中元素本身的列表综合，这里是元素本身
+
+  - 排列问题和回溯的关系
+    - 排列问题是按长度遍历一个集合，目标节点是每个元素i，将结果列表在第j位的所有可能作为递归树的同一层，树的层数一般是集合元素的个数n
+    - 树的第j层节点是当结果已经获取到0~j-1层数据的情况下，还可以使用的节点列表，每层的可用节点列表和已经排出来的层是有关的
+      - 全排列问题，已经在层路径列表中的元素不能作为下一层的元素使用，剪枝
+      - n皇后问题，已经在层路径上出现过的同列或对角线上的点都不能作为下一层元素使用，剪枝
+    - path里放置处理结果，同时，path本身的长度刚好和level相同，因此只向下面的递归函数传递path即可
+    - 结果是集合中元素本身的列表的总和，这里是元素本身
+
+  - 子集问题和回溯的关系
+    - 子集问题是按长度遍历一个集合，目标节点是每个元素i对应的若干种状态，将同一个元素i作为递归树的同一层，树的层数是集合元素的个数n或者是小于n的一个数
+    - 树的第i层节点就是子集合中第i个元素可以选择的内容
+      - 子集就是这些内容无关，比如纯子集问题，就是当前元素选和不选，电话号码问题，就是每个数字对应的几个字母选项
+      - 无关的子集问题就没有机会剪枝, 复杂度就是 x的n次方，x是每层的可选择内容树
+      - 有关的子集问题一般要具体分析，比如()()()问题，实际上隐含的条件是任何时候)不能比(多，由此达到剪枝的目的
+    - 可以直接使用 level+1 向下层推进， path里放置处理结果，而level+1用于表明是否已经递进到n，可以返回了。 返回的时候把path的结果丢到总结果里，path长度于level+1无关，所以需要传递这两个值到下一次递归
+    - 结果是集合中元素对应的状态的列表的总和， 这里是元素对应的状态。
+
+## 思考
+
 - 组合问题
   - 组合问题一般不是回溯法解决的问题，但是可以看做回溯方式的一个特例，就是不回溯的回溯法。。。  
     - 套用回溯模板就是，不要调用撤销，同时每次递归在从选择列表中只拿一个备选项向下递归即可，不能遍历所有剩下的
@@ -8,7 +49,12 @@
     - 所以组合问题是不是要撤销也不是关键，关键的是 在每层选择的时候，一次性把该层次所有的可能都递归出去时，各个递归之间究竟有没有影响，如果有影响，在每次递归之后都要撤销操作，如果没有影响，就不用管了。
     - 所以所谓撤销实际的含义是：  撤销同层兄弟节点之间的互相影响。
   - 上面的结论有待进一步证实
+  - 已经整理成总结
 
+- 对剪枝的理解
+  - 不仅仅是优化
+  - 同时也是保证结果正确性的最佳办法，即在遍历过程中筛选正确结果
+  
 ## 随笔
 
 ### 关于模板
@@ -60,17 +106,4 @@
 | [236 lowest-common-ancestor-of-a-binary-tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)| 🟡 中等 | 泛型递归、树的递归 | - | |||||
 | [105 construct-binary-tree-from-preorder-and-inorder-traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| 🟡 中等 | 泛型递归、树的递归 | - | |||||
 | [77 combinations](https://leetcode.com/problems/combinations/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合](https://leetcode-cn.com/problems/combinations/)| 🟡 中等 | 泛型递归、树的递归 | - | |||||
-| [46 permutations](https://leetcode.com/problems/permutations/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列](https://leetcode-cn.com/problems/permutations/)| 🟡 中等 | 泛型递归、树的递归 | - | |||||
-| [47 permutations-ii](https://leetcode.com/problems/permutations-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/)| 🟡 中等 | 泛型递归、树的递归 | - | |||||
-
-### 下周预习
-| 题号 | 名称 | 难度 | 分类 | 备注 |#1 | #2 | #3 | #4 | #? |
-| --- | --- | --- | --- | --- |--- | --- | --- | --- | --- |
-| [102](https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)| 🟡 中等 | 深度优先、广度优先 | - ||||||
-| [322](https://leetcode.com/problems/coin-change/discuss/?currentPage=1&orderBy=most_votes&query=) | [零钱兑换](https://leetcode-cn.com/problems/coin-change/)| 🟡 中等 | 动态规划 | - ||||||
-| [69](https://leetcode.com/problems/sqrtx/discuss/?currentPage=1&orderBy=most_votes&query=) | [x 的平方根](https://leetcode-cn.com/problems/sqrtx/)| 🟢 简单 | 二分查找 | - ||||||
-| [367](https://leetcode.com/problems/valid-perfect-square/discuss/?currentPage=1&orderBy=most_votes&query=) | [有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/)| 🟢 简单 | 二分查找 | - ||||||
-| [122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)| 🟢 简单 | 贪心算法 | - ||||||
-| [455](https://leetcode.com/problems/assign-cookies/discuss/?currentPage=1&orderBy=most_votes&query=) | [分发饼干](https://leetcode-cn.com/problems/assign-cookies/)| 🟢 简单 | 贪心算法 | - ||||||
-| [55](https://leetcode.com/problems/jump-game/discuss/?currentPage=1&orderBy=most_votes&query=) | [跳跃游戏](https://leetcode-cn.com/problems/jump-game/)| 🟡 中等 | 贪心算法 | - ||||||
-
+| [46 permutations](https://leetcode.com/problems/permutations
