@@ -4,6 +4,15 @@
 - 回溯
   - 画递归树非常有帮助
   - 虽然不是能特别理解为什么对于排列组合等问题，刚好就能不重复还不遗漏的获得结果，但模板的确得到的都是正确结果
+  - 最难的地方还是剪枝，剪枝。 模板相对比较容易背诵，剪枝还是千差万别
+    - 全排列：剪枝剪的就是用过的
+    - 有重复的全排列：剪用过的，还要剪兄弟间重复的
+    - 子集： 基本没什么可剪的，除非元素间彼此有关系，例如括号问题，先有左才能有右
+    
+- 如何归纳一个问题究竟属于排列问题，组合问题还是子集问题
+    - 结果有顺序的，path大小固定的，一般是排列问题，反而可以先把原集合排序后再计算
+    - 结果没有顺序的，一般是组合问题（组合总和例外），原集合也可以做排序再计算，有时并不必要
+    - 结果有顺序的，path大小不固定的，一般是子集问题，原集合不能做排序
 
 - 回溯模板实际上就是继承了递归的模板
   - 回溯的清理工作，就是在遍历同层兄弟节点时，互相不要干扰，每个节点用完了path变量要把其对path的修改revert掉，以至于当前的深度遍历回来时，还是从前那个少年
@@ -49,6 +58,8 @@
 - 排列组合集合中有重复元素，结果不许重复的，还想不太明白visited到底是怎么用的
     - 排列II 不明白
       - 试一下额外减掉额外的相同兄弟节点试试
+      - 可以解决
+      - 但是用visitd指针向下传的方法还不透，反而是把nums集合修理成一个不包含pash的集合继续递归容易理解，但是这样开销比较大
     - 组合总和II 不明白 
       - 套用模板是可以做的
       - 具体的剪枝对于有重复的组合来说也是额外减掉与兄弟相同节点即可
@@ -109,16 +120,16 @@
 | [22 generate-parentheses](https://leetcode.com/problems/generate-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [括号生成](https://leetcode-cn.com/problems/generate-parentheses/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.27✅|8.28|9.2||
 | [50 powx-n](https://leetcode.com/problems/powx-n/discuss/?currentPage=1&orderBy=most_votes&query=) | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)| 🟡 中等 | 分治、回溯 | - |8.24✅  |8.27✅|8.28|9.2||
 | [78 subsets](https://leetcode.com/problems/subsets/discuss/?currentPage=1&orderBy=most_votes&query=) | [子集](https://leetcode-cn.com/problems/subsets/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |8.27✅|8.28|9.2||
-| [17 letter-combinations-of-a-phone-number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/?currentPage=1&orderBy=most_votes&query=) | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |||||
-| [51 n-queens](https://leetcode.com/problems/n-queens/discuss/?currentPage=1&orderBy=most_votes&query=) | [N皇后](https://leetcode-cn.com/problems/n-queens/)| 🔴 困难 | 分治、回溯 | - |8.24✅  |||||
-| [169 majority-element](https://leetcode-cn.com/problems/majority-element) | [多数元素](https://leetcode-cn.com/problems/majority-element)|  🟢 简单 | 分治、回溯 | - | 8.24✅ |||||
+| [17 letter-combinations-of-a-phone-number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/?currentPage=1&orderBy=most_votes&query=) | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |8.29|8.30|9.6||
+| [51 n-queens](https://leetcode.com/problems/n-queens/discuss/?currentPage=1&orderBy=most_votes&query=) | [N皇后](https://leetcode-cn.com/problems/n-queens/)| 🔴 困难 | 分治、回溯 | - |8.24✅  |8.29|8.30|9.6||
+| [169 majority-element](https://leetcode-cn.com/problems/majority-element) | [多数元素](https://leetcode-cn.com/problems/majority-element)|  🟢 简单 | 分治、回溯 | - | 8.24✅ |8.29|8.30|9.6||
 
 ### 课后作业
 | 题号 | 名称 | 难度 | 分类 | 备注 |#1 | #2 | #3 | #4 | #? |
 | --- | --- | --- | --- | --- |--- | --- | --- | --- | --- |
-| [236 lowest-common-ancestor-of-a-binary-tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |||||
-| [105 construct-binary-tree-from-preorder-and-inorder-traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |||||
-| [77 combinations](https://leetcode.com/problems/combinations/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合](https://leetcode-cn.com/problems/combinations/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |||||
-| [46 permutations](https://leetcode.com/problems/permutations/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列](https://leetcode-cn.com/problems/permutations/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |||||
-| [47 permutations-ii](https://leetcode.com/problems/permutations-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |||||
+| [236 lowest-common-ancestor-of-a-binary-tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29|8.30|9.6||
+| [105 construct-binary-tree-from-preorder-and-inorder-traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29|8.30|9.6||
+| [77 combinations](https://leetcode.com/problems/combinations/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合](https://leetcode-cn.com/problems/combinations/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29|8.30|9.6||
+| [46 permutations](https://leetcode.com/problems/permutations/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列](https://leetcode-cn.com/problems/permutations/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29|8.30|9.6||
+| [47 permutations-ii](https://leetcode.com/problems/permutations-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29✅ |8.30|9.6||
 
