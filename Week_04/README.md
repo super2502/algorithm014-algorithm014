@@ -14,6 +14,7 @@
 |DFS递归|https://shimo.im/docs/9CYPpdcPGwXT93QV/|这玩意和回溯模板怎么区分，都是dfs为什么这儿可以不回溯|week04|
 |DFS迭代|https://shimo.im/docs/JqXDvhW9jt6Y9hQV/ |这就是树的先序遍历模板 |week04|
 |BFS|https://shimo.im/docs/VkVGpccqqxwvqtgR/|用队列|week04|
+|二分查找|https://shimo.im/docs/vkPwvRcktgHdWWdW/|细节需要研究，都是边界问题|week04|
 |回溯|https://shimo.im/docs/3c3VYtCW9kyCcGYc|模板很好用|week03|
 |单调栈单调队列|https://shimo.im/docs/hyWwqQ39xVcwk3xG/| 理解的还凑合，记得不牢|week02|
 |二叉树展开成右单链表|https://shimo.im/docs/6qJrdVCxvJyKXy6j/ |理解的不怎么样|week02|
