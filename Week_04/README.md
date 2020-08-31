@@ -8,25 +8,7 @@
 - DFS实际上是树的先序遍历 ？？
   - 应该是，因为在做树的染色法迭代遍历时，曾经发现过，只有先序遍历不需要把当前节点压栈两次，其简化版就和现在的dfs模板一样
 - 模板
-  - 非常惊诧的发现了这样一个模板，和标准二分模板一模一样，而且能获取比要搜索的值小的最大的那个。。。, 完全搞不懂为什么
-  ```
-    left := lo
-    right := hi
-    for left <= right {
-        mid := left + (left-right) / 2 
-        if target == nums[mid] {
-            return true
-        } else if target < nums[mid] {
-            right = mid - 1
-        } else {
-            left = mid + 1
-        }
-    }
-    if left == lo {
-        return false
-    }
-    left--
-  ```
+
 |模板|笔记|理解|历史|
 |---|---|---|---|
 |DFS递归|https://shimo.im/docs/9CYPpdcPGwXT93QV/|这玩意和回溯模板怎么区分，都是dfs为什么这儿可以不回溯|week04|
@@ -59,6 +41,28 @@
   - 旋转排序数组的最小值， 边界边界边界搞不清楚
   - 总有 left <= right,  right = mid - 1, left = mid + 1的标准解法
   - 怎么统一这个模板？ 才能一定用到上面的边界？
+
+- 非常惊诧的发现了这样一个模板，和标准二分模板一模一样，而且能获取比要搜索的值小的最大的那个。。。, 完全搞不懂为什么
+  - ok 今天稍微懂了点， return right也行 @2020-08-31
+  ```
+    left := lo
+    right := hi
+    for left <= right {
+        mid := left + (left-right) / 2 
+        if target == nums[mid] {
+            return true
+        } else if target < nums[mid] {
+            right = mid - 1
+        } else {
+            left = mid + 1
+        }
+    }
+    if left == lo {
+        return false
+    }
+    left--
+  ```
+
 
 # 提交作业
 ```
