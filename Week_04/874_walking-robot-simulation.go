@@ -12,21 +12,19 @@ func robotSim(commands []int, obstacles [][]int) int {
 	}
 	distX := []int{0, 1, 0, -1}
 	distY := []int{1, 0, -1, 0}
-	px, py := 0, 0
+	d := 0
 	x, y := 0, 0
 
 	maxArea := 0
 	for _, command := range commands {
 		if command == -1 {
-			px = (px + 1) % 4
-			py = (py + 1) % 4
+			d = (d + 1) % 4
 		} else if command == -2 {
-			px = (px + 3) % 4
-			py = (py + 3) % 4
+			d = (d + 3) % 4
 		} else {
 			for k := 0; k < command; k++ {
-				nextX := x + distX[px]
-				nextY := y + distY[py]
+				nextX := x + distX[d]
+				nextY := y + distY[d]
 				if _, ok := obsMap[fmt.Sprintf("%d.%d", nextX, nextY)]; ok {
 					break
 				}
