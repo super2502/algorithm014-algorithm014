@@ -1,5 +1,6 @@
 package Week_03
 
+// 细节是魔鬼： i > start
 import "sort"
 
 var ret40 [][]int
