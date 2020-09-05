@@ -102,13 +102,13 @@
     if 满足结束条件:
         result.add(路径)
         return
-    for 选择 in 选择列表:
+    for 选择 in 选择列表:  <----- 这个模板这儿是精髓，搞不清楚的话也用不好
         做选择
         backtrack(路径, 选择列表)
         撤销选择
         
 变成了
-    if 满足结束条件:
+    if 满足结束条件:  
         result.add(路径)
         return
     选择下一个
