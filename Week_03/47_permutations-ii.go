@@ -5,6 +5,16 @@ import (
 	"sort"
 )
 
+// 这里用的方法是抠掉当前用的数字，然后将剩余部分向下递归，规避了visited乱套的问题
+// 如果使用visited，注意下面用法
+//if (*visited)[i] {
+//	continue
+//}
+//if i > 0 && nums[i] == nums[i - 1] && !(*visited)[i-1] {
+//	continue
+//}
+// 这里!(*visited)[i-1] 是因为只有回溯的兄弟节点才会把自己的visited去掉，这样证明这个节点就是兄弟节点
+// 而兄弟节点值相同的正是要剪枝剪掉的，其余还在visited里的节点是父+节点，当前节点不能被剪掉还得继续拿去递归
 var ret47 [][]int
 
 func permuteUnique(nums []int) [][]int {
