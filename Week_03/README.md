@@ -126,9 +126,9 @@
 | [22 generate-parentheses](https://leetcode.com/problems/generate-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [括号生成](https://leetcode-cn.com/problems/generate-parentheses/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.27✅|8.28✅|9.5✅||
 | [50 powx-n](https://leetcode.com/problems/powx-n/discuss/?currentPage=1&orderBy=most_votes&query=) | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)| 🟡 中等 | 分治、回溯 | - |8.24✅  |8.27✅|8.28✅|9.5✅||
 | [78 subsets](https://leetcode.com/problems/subsets/discuss/?currentPage=1&orderBy=most_votes&query=) | [子集](https://leetcode-cn.com/problems/subsets/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |8.27✅|8.28✅|9.5✅||
-| [17 letter-combinations-of-a-phone-number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/?currentPage=1&orderBy=most_votes&query=) | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |8.29✅|8.30✅|9.6||
-| [51 n-queens](https://leetcode.com/problems/n-queens/discuss/?currentPage=1&orderBy=most_votes&query=) | [N皇后](https://leetcode-cn.com/problems/n-queens/)| 🔴 困难 | 分治、回溯 | - |8.24✅  |8.29✅|8.30✅|9.6||
-| [169 majority-element](https://leetcode-cn.com/problems/majority-element) | [多数元素](https://leetcode-cn.com/problems/majority-element)|  🟢 简单 | 分治、回溯 | - | 8.24✅ |8.29✅|8.30✅|9.6||
+| [17 letter-combinations-of-a-phone-number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/?currentPage=1&orderBy=most_votes&query=) | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |8.29✅|8.30✅|9.6✅||
+| [51 n-queens](https://leetcode.com/problems/n-queens/discuss/?currentPage=1&orderBy=most_votes&query=) | [N皇后](https://leetcode-cn.com/problems/n-queens/)| 🔴 困难 | 分治、回溯 | - |8.24✅  |8.29✅|8.30✅|9.6✅||
+| [169 majority-element](https://leetcode-cn.com/problems/majority-element) | [多数元素](https://leetcode-cn.com/problems/majority-element)|  🟢 简单 | 分治、回溯 | - | 8.24✅ |8.29✅|8.30✅|9.6✅||
 
 ### 课后作业
 | 题号 | 名称 | 难度 | 分类 | 备注 |#1 | #2 | #3 | #4 | #? |
