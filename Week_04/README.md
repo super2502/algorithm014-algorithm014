@@ -56,8 +56,9 @@
 
 |表3|情况|分析|模板：l <= r; l = mid +1; r = mid -1| 细节处理： l <= mid { l <= target<mid? to left: to right} 或者 l > mid {mid < target <= r? to right:to left} |
 |---|---|---|---|---|
-|1|target>l<r| 只剩两个元素永远符合l<=mid, 不可能满足target在两者之间，一定会丢到右边|总之不管怎么样target都会被丢到右边去比一次，就比全了|                       
-|2|其他情况已被标准情况cover|||
+|1|target>l<r target<l<r| 只剩两个元素永远符合l<=mid, 不可能满足target在两者之间，一定会丢到右边|总之不管怎么样target都会被丢到右边去比一次，就比全了|   
+|2|l<r<target l<r>target| 跟上边是一样的||
+|3|其他情况已被标准情况cover|||
 
 
 - 模板
