@@ -2,11 +2,14 @@
 
 ## 一周明显遗忘以及不熟题目
 - lru用golang自带的list反而不熟练
+- 子集问题在回溯算法中没有理解透彻
 
 | 题号 | 名称 | 难度 | 分类 | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [15 3sum](https://leetcode.com/problems/3sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [三数之和](https://leetcode-cn.com/problems/3sum/)| 🟡 中等 | 数组 | 08.10✅  | 08.12✅  | 08.13✅  | 08.20✅  | - | - | - | - |
 | [146 lru-cache](https://leetcode.com/problems/lru-cache/discuss/?currentPage=1&orderBy=most_votes&query=) | [LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)| 🟡 中等 | 链表 | 08.10✅ | 08.10✅ | 08.12✅ | 08.21✅  | - |- | - | - |
+| [78 subsets](https://leetcode.com/problems/subsets/discuss/?currentPage=1&orderBy=most_votes&query=) | [子集](https://leetcode-cn.com/problems/subsets/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |8.27✅|8.28✅|9.5✅||- | - | - |
+
 
 ![](./complexity.png)
 

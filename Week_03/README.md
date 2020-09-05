@@ -46,7 +46,12 @@
     - 结果是集合中元素本身的列表的总和，这里是元素本身
 
   - 子集问题和回溯的关系
-    - 子集问题是按长度遍历一个集合，目标节点是每个元素i对应的若干种状态，将同一个元素i作为递归树的同一层，树的层数是集合元素的个数n或者是小于n的一个数
+    - 之前的整理还是没有得到要领 @2020-09-05， 模板中的遍历条件一定是子集中当前元素的状态，而不是给定集合，不是给定集合 
+      - 78子集，遍历条件是当前数字选还是不选，然后level+1就向下递归了
+      - 括号问题，同上
+      - 电话号码问题，遍历条件是每个数字自己对应的字母列表
+      
+    - 头一句是错的 -> 子集问题是按长度遍历一个集合，目标节点是每个元素i对应的若干种状态，将同一个元素i作为递归树的同一层，树的层数是集合元素的个数n或者是小于n的一个数
     - 树的第i层节点就是子集合中第i个元素可以选择的内容
       - 子集就是这些内容无关，比如纯子集问题，就是当前元素选和不选，电话号码问题，就是每个数字对应的几个字母选项
       - 无关的子集问题就没有机会剪枝, 复杂度就是 x的n次方，x是每层的可选择内容树
@@ -117,13 +122,13 @@
 ### 实战
 | 题号 | 名称 | 难度 | 分类 | 备注 | #1 | #2 | #3 | #4 | #? |
 | --- | --- | --- | --- | --- |  --- | --- | --- | --- | --- |
-| [70 climbing-stairs](https://leetcode.com/problems/climbing-stairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)| 🟢 简单 | 泛型递归、树的递归 | - |8.24✅ |8.27✅|8.28✅|9.2||
-| [22 generate-parentheses](https://leetcode.com/problems/generate-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [括号生成](https://leetcode-cn.com/problems/generate-parentheses/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.27✅|8.28✅|9.2||
-| [50 powx-n](https://leetcode.com/problems/powx-n/discuss/?currentPage=1&orderBy=most_votes&query=) | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)| 🟡 中等 | 分治、回溯 | - |8.24✅  |8.27✅|8.28✅|9.2||
-| [78 subsets](https://leetcode.com/problems/subsets/discuss/?currentPage=1&orderBy=most_votes&query=) | [子集](https://leetcode-cn.com/problems/subsets/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |8.27✅|8.28✅|9.2||
-| [17 letter-combinations-of-a-phone-number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/?currentPage=1&orderBy=most_votes&query=) | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |8.29✅|8.30✅|9.6||
-| [51 n-queens](https://leetcode.com/problems/n-queens/discuss/?currentPage=1&orderBy=most_votes&query=) | [N皇后](https://leetcode-cn.com/problems/n-queens/)| 🔴 困难 | 分治、回溯 | - |8.24✅  |8.29✅|8.30✅|9.6||
-| [169 majority-element](https://leetcode-cn.com/problems/majority-element) | [多数元素](https://leetcode-cn.com/problems/majority-element)|  🟢 简单 | 分治、回溯 | - | 8.24✅ |8.29✅|8.30✅|9.6||
+| [70 climbing-stairs](https://leetcode.com/problems/climbing-stairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)| 🟢 简单 | 泛型递归、树的递归 | - |8.24✅ |8.27✅|8.28✅|9.5✅||
+| [22 generate-parentheses](https://leetcode.com/problems/generate-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [括号生成](https://leetcode-cn.com/problems/generate-parentheses/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.27✅|8.28✅|9.5✅||
+| [50 powx-n](https://leetcode.com/problems/powx-n/discuss/?currentPage=1&orderBy=most_votes&query=) | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)| 🟡 中等 | 分治、回溯 | - |8.24✅  |8.27✅|8.28✅|9.5✅||
+| [78 subsets](https://leetcode.com/problems/subsets/discuss/?currentPage=1&orderBy=most_votes&query=) | [子集](https://leetcode-cn.com/problems/subsets/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |8.27✅|8.28✅|9.5✅||
+| [17 letter-combinations-of-a-phone-number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/?currentPage=1&orderBy=most_votes&query=) | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)| 🟡 中等 | 分治、回溯 | - | 8.24✅ |8.29✅|8.30✅|9.6✅||
+| [51 n-queens](https://leetcode.com/problems/n-queens/discuss/?currentPage=1&orderBy=most_votes&query=) | [N皇后](https://leetcode-cn.com/problems/n-queens/)| 🔴 困难 | 分治、回溯 | - |8.24✅  |8.29✅|8.30✅|9.6✅||
+| [169 majority-element](https://leetcode-cn.com/problems/majority-element) | [多数元素](https://leetcode-cn.com/problems/majority-element)|  🟢 简单 | 分治、回溯 | - | 8.24✅ |8.29✅|8.30✅|9.6✅||
 
 ### 课后作业
 | 题号 | 名称 | 难度 | 分类 | 备注 |#1 | #2 | #3 | #4 | #? |
