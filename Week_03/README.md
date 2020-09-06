@@ -1,6 +1,11 @@
 学习笔记
 
 ## 总结
+- 细节问题：
+  - 子集回溯模板的遍历对象是什么？
+  - 全排列去重里visitd-1的含义究竟是什么
+  - 组合里 start的玩法
+
 - 回溯
   - 画递归树非常有帮助
   - 虽然不是能特别理解为什么对于排列组合等问题，刚好就能不重复还不遗漏的获得结果，但模板的确得到的都是正确结果
@@ -97,13 +102,13 @@
     if 满足结束条件:
         result.add(路径)
         return
-    for 选择 in 选择列表:
+    for 选择 in 选择列表:  <----- 这个模板这儿是精髓，搞不清楚的话也用不好
         做选择
         backtrack(路径, 选择列表)
         撤销选择
         
 变成了
-    if 满足结束条件:
+    if 满足结束条件:  
         result.add(路径)
         return
     选择下一个
@@ -133,10 +138,10 @@
 ### 课后作业
 | 题号 | 名称 | 难度 | 分类 | 备注 |#1 | #2 | #3 | #4 | #? |
 | --- | --- | --- | --- | --- |--- | --- | --- | --- | --- |
-| [236 lowest-common-ancestor-of-a-binary-tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29✅|8.30✅|9.6||
-| [105 construct-binary-tree-from-preorder-and-inorder-traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29✅|8.30✅|9.6||
-| [77 combinations](https://leetcode.com/problems/combinations/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合](https://leetcode-cn.com/problems/combinations/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29✅|8.30✅|9.6||
-| [46 permutations](https://leetcode.com/problems/permutations/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列](https://leetcode-cn.com/problems/permutations/)| 🟡 中等 | 回溯算法 | - |8.24✅  |8.29✅|8.30✅|9.6||
-| [47 permutations-ii](https://leetcode.com/problems/permutations-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/)| 🟡 中等 | 回溯算法 | - |8.24✅  |8.29✅ |8.30✅|9.6||
-| [39 combination-sum](https://leetcode.com/problems/combination-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合总和](https://leetcode-cn.com/problems/combination-sum/)| 🟡 中等 | 数组、回溯算法 | - |8.28✅  |8.29✅ |8.30✅|9.6||
-| [40 combination-sum-ii](https://leetcode.com/problems/combination-sum-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)| 🟡 中等 | 数组、回溯算法 | - |8.28✅  |8.29✅ |8.30✅|9.6||
+| [236 lowest-common-ancestor-of-a-binary-tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29✅|8.30✅|9.6✅||
+| [105 construct-binary-tree-from-preorder-and-inorder-traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29✅|8.30✅|9.6✅||
+| [77 combinations](https://leetcode.com/problems/combinations/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合](https://leetcode-cn.com/problems/combinations/)| 🟡 中等 | 泛型递归、树的递归 | - |8.24✅  |8.29✅|8.30✅|9.6✅||
+| [46 permutations](https://leetcode.com/problems/permutations/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列](https://leetcode-cn.com/problems/permutations/)| 🟡 中等 | 回溯算法 | - |8.24✅  |8.29✅|8.30✅|9.6✅||
+| [47 permutations-ii](https://leetcode.com/problems/permutations-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/)| 🟡 中等 | 回溯算法 | - |8.24✅  |8.29✅ |8.30✅|9.6✅||
+| [39 combination-sum](https://leetcode.com/problems/combination-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合总和](https://leetcode-cn.com/problems/combination-sum/)| 🟡 中等 | 数组、回溯算法 | - |8.28✅  |8.29✅ |8.30✅|9.6✅||
+| [40 combination-sum-ii](https://leetcode.com/problems/combination-sum-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)| 🟡 中等 | 数组、回溯算法 | - |8.28✅  |8.29✅ |8.30✅|9.6✅||

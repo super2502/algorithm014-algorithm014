@@ -17,39 +17,61 @@
       - 剪兄弟节点：同样是单词接龙，如果仅找最小接龙次数，那么在同层的BFS时直接对兄弟节点进行visited剪枝。
       - 只剪父+节点：但如果要穷举所有的最小次数的路径，就要在每次处理完一整层的时候再一次性灌注visited，因为同层节点即使用过，但父路径是不一样的。
     
-- 套路二： 二分查找
+- 套路二： 二分查找，（最后发现这是一道证明题，证明模板的普适性，然后背就好了。。）
   - 最重要的，二分查找的边界问题
     - 只要记住一个模板，不要其他的
     - left <= right;  left = mid +1; right = mid - 1
-  - 二分的细节，只有分到最后才有细节问题
+    - 然后证明这个模板百搭。
+  - 二分搜索魔鬼细节1，分到最后的边界问题
     - 最后的最后，只有一个数，肯定不是结果了，想清楚左右指针的走向
-    - 倒数第二后，挨着两个数，mid=left，想清楚左右指针的走向
-    - 没了。
-  - 二分的边界，只有非单调的所搜对象有边界问题
-    - 用特例，即目标和mid重合，目标和left重合，目标和right重合来考虑等于号怎么写
-  - 二分变种1，单调数组，找头一个比目标小的鬼
-    - 查到就剩俩数挨着时，要查找的数如果是其中一个，总能找到，如果也不是，分三种情况
-    - 不管什么情况， 拿right就对了, 具体见表1
-  - 二分变种2，单调数组但是有重复的，找到最左边的目标
-  - 二分变种3，单调数组旋转过 
+    - 倒数第二后，挨着两个数，mid=left，想清楚左右指针的走向，这个阶段问题最多，很多case也是直接就写俩奇葩数直接测这儿
+  - 二分搜索魔鬼细节2，判断完mid == targe之后， 二择的对象是什么
+    - 常规搜索，二择的对象还是 mid与target
+    - 找有重复数组的最左目标，二择对象也是 mid与target
+    - 带旋转的搜索，二择的对象是 left与mid （这个可以理解，但是需要背诵，因为非常绕）
+    - 带旋转的最小值，二择的对象是？
+  - 二分搜索魔鬼细节3，判断完mid == targe之后， return还是干啥
+    - 搜索有重复的数组时，俩人等了不要return，继续往左搜
+  - 二分变种1，单调数组，找头一个比目标小的鬼, 具体见表1
+    - 魔鬼般的细节2：二择的目标还是mid与target的大小比较
+    - 魔鬼般的细节1：查到就剩俩数挨着时，要查找的数如果是其中一个，总能找到，如果也不是，分三种情况
+    - 不管什么情况， 拿right就对了
+  - 二分变种2，单调数组但是有重复的，找到最左边的目标， 见表2
+    - 这是一个奇葩，分析的方式不太一样
+    - 魔鬼般的细节1：就剩俩数挨着时，是不是符合模板
+  - 二分变种3，搜索单调数组旋转过的
+    - 魔鬼般的细节2：判断完mid==target之后，二择的目标是  num[l]与num[mid]的大小，因此其中有个等号也是魔鬼
+    - 魔鬼般的细节1：查到就剩俩数挨着时，一定要保证下面三点,具体见表3
+      - 1 左小于右时，如果targe比左大，会被扔到右边
+      - 2 左大于右时，如果targe比左小，会被扔到右边
+    - 额外的魔鬼：因为targe要与左右界比较，所以要在左右界比较时加等号，为啥mid不加，因为mid专门判断了等不等。
+  - 二分变种4，单调数组找最小值，待证明
+  - 其他没见过的二分，慢慢来
     
-|表1|情况|分析|| |
+|表1|情况|分析|模板: l <= r; l = mid +1; r = mid -1| |
 |---|---|---|---|---|
-|1|要查找的数在俩人中间|倒数第二次查找， 一定会查left， 查不着 left进一和right重合，查完right以后，会令right-1，right会指向比要查的数小的位置||
-|2|要查找的数要在right右边|倒数第二次查找， 一定会查left， 查不着 left进一和right重合，查完right以后，会令left+1， right不变，right会指向比要查的数小的位置||
-|3|要查找的数在left左边|倒数第二次查找， 一定会查left， 查不着 right-1和left重合， 查完right以后，继续令right-1，right会指向比要查的数小的位置  ||
+|1|l<target<r|倒数第二次查找， 一定会查left， 查不着 left进一和right重合，查完right以后，会令right-1|right会指向比要查的数小的位置|
+|2|l<r<target|倒数第二次查找， 一定会查left， 查不着 left进一和right重合，查完right以后，会令left+1， right不变|right会指向比要查的数小的位置|
+|3|target<l<r|倒数第二次查找， 一定会查left， 查不着 right-1和left重合， 查完right以后，继续令right-1 |right会指向比要查的数小的位置|
    
-|表2|情况|分析|| |
+|表2|情况|特殊的分析|模板：l <= r; l = mid +1; r = mid | 魔鬼细节：因为没有target，所以只要比较mid和r， 因为要取左中，所以r左移不能超过mid，这里没办法只能改模板了|
 |---|---|---|---|---|
-|1||||
-|2||||
-|3||||
+|1|形如4567801 左<中>右| 在右边 |||
+|1.1|形如321 左>中>右|不存在|||
+|1.2|形如21 左=中>右|在右边|||
+|1.3|形如1中=右|已无所谓，只决定l r最后在哪儿|||
+|2|形如56701234 左>中<右| 在左边，包含中|||
+|3|形如12 左=中<右| 在左边|||
+|4|形如012345 左<中<右| 在左边|||
+|5|没了|从上边看出不管左和中什么关系，只要中比右小，最小值就在左(包含中)，或者说只要中比右大，就在右边，还不包含中|因此丢到左边时，得带着中丢，所以r=mid, 而丢到右边时不带中，l=mid+1|
+|6|返回谁 形如12|mid=left 中<右，走左，r左移至mid与l重合，之后最后一次循环l走掉了，r留在最小值上||不管啥情况，最后r指向最小值|
+|7|返回谁 形如21|mid=left 中不小于右，走右，l右移与r重合，之后最后一次循环l走掉了，r留在最小值上||不管啥情况，最后r指向最小值|
 
-|表3|情况|分析|| |
+|表3|情况|分析|模板：l <= r; l = mid +1; r = mid -1| 细节处理： l <= mid { l <= target<mid? to left: to right} 或者 l > mid {mid < target <= r? to right:to left} |
 |---|---|---|---|---|
-|1||||
-|2||||
-|3||||
+|1|target>l<r target<l<r| 只剩两个元素永远符合l<=mid, 不可能满足target在两者之间，一定会丢到右边|总之不管怎么样target都会被丢到右边去比一次，就比全了|   |
+|2|l<r<target l<r\>target| 跟上边是一样的|这个细节处理 l<=mid加上l<=target<mid配套的太牛逼，直接把所有情况的target全部一脚踢到右边，这里有个问题，如果是找谁比target小就得瞎|这个魔鬼操作只能硬背了|
+|3|其他情况已被标准情况cover|||
 
 
 - 模板
@@ -68,7 +90,15 @@
   - 二叉树展开成右单链表
   - 丑数
   
+- 第三周题目第四掌总结
+  - 隔周做了第三周的题目，发现好多细节记不清了，比如子集问题回溯法的遍历目标是什么，全排列ii那个visit-1是怎么回事，组合ii里的i>start 都不记得了，调试了才想起来
+  - 细思极恐
+  - 易错的细节也要整理一下
 
+- 贪心算法
+  - 这周没怎么敢动贪心算法
+  - 感觉贪心算法才是最难的，根本没有套路，得先知道怎么贪，还得能证明贪的对
+  
 # 思考
 
 - DFS和回溯
@@ -140,16 +170,16 @@
 
 | 题号 | 名称 | 难度 | 分类 | 备注 |#1 | #2 | #3 | #4 | #？|
 | --- | --- | --- | --- | --- |--- | --- | --- | --- | --- |
-| [860 lemonade-change](https://leetcode.com/problems/lemonade-change/discuss/?currentPage=1&orderBy=most_votes&query=) | [柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/)| 🟢 简单 | 贪心算法 | - |8.30✅|9.2✅|9.4|9.11||
-| [122 best-time-to-buy-and-sell-stock-ii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)| 🟢 简单 | 贪心算法 | - |8.30✅|9.2✅|9.4|9.11||
-| [455 assign-cookies](https://leetcode.com/problems/assign-cookies/discuss/?currentPage=1&orderBy=most_votes&query=) | [分发饼干](https://leetcode-cn.com/problems/assign-cookies/)| 🟢 简单 | 贪心算法 | - | 8.30✅|9.2✅|9.4|9.11||
-| [874 walking-robot-simulation](https://leetcode.com/problems/walking-robot-simulation/discuss/?currentPage=1&orderBy=most_votes&query=) | [模拟行走机器人](https://leetcode-cn.com/problems/walking-robot-simulation/)| 🟢 简单 | 贪心算法 | - |8.30✅|9.2✅|9.4|9.11||
-| [127 word-ladder](https://leetcode.com/problems/word-ladder/discuss/?currentPage=1&orderBy=most_votes&query=) | [单词接龙](https://leetcode-cn.com/problems/word-ladder/)| 🟡 中等 | 深度优先、广度优先 | - |8.30✅|9.2✅|9.4|9.11||
-| [200 number-of-islands](https://leetcode.com/problems/number-of-islands/discuss/?currentPage=1&orderBy=most_votes&query=) | [岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)| 🟡 中等 | 深度优先、广度优先 | - |8.30✅|9.2✅|9.4|9.11||
-| [529 minesweeper](https://leetcode.com/problems/minesweeper/discuss/?currentPage=1&orderBy=most_votes&query=) | [扫雷游戏](https://leetcode-cn.com/problems/minesweeper/)| 🟡 中等 | 深度优先、广度优先 | - |8.30✅|9.2✅|9.4|9.11||
+| [860 lemonade-change](https://leetcode.com/problems/lemonade-change/discuss/?currentPage=1&orderBy=most_votes&query=) | [柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/)| 🟢 简单 | 贪心算法 | - |8.30✅|9.2✅|9.7|9.18||
+| [122 best-time-to-buy-and-sell-stock-ii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)| 🟢 简单 | 贪心算法 | - |8.30✅|9.2✅|9.7|9.18||
+| [455 assign-cookies](https://leetcode.com/problems/assign-cookies/discuss/?currentPage=1&orderBy=most_votes&query=) | [分发饼干](https://leetcode-cn.com/problems/assign-cookies/)| 🟢 简单 | 贪心算法 | - | 8.30✅|9.2✅|9.7|9.18||
+| [874 walking-robot-simulation](https://leetcode.com/problems/walking-robot-simulation/discuss/?currentPage=1&orderBy=most_votes&query=) | [模拟行走机器人](https://leetcode-cn.com/problems/walking-robot-simulation/)| 🟢 简单 | 贪心算法 | - |8.30✅|9.2✅|9.7|9.18||
+| [127 word-ladder](https://leetcode.com/problems/word-ladder/discuss/?currentPage=1&orderBy=most_votes&query=) | [单词接龙](https://leetcode-cn.com/problems/word-ladder/)| 🟡 中等 | 深度优先、广度优先 | - |8.30✅|9.2✅|9.7|9.18||
+| [200 number-of-islands](https://leetcode.com/problems/number-of-islands/discuss/?currentPage=1&orderBy=most_votes&query=) | [岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)| 🟡 中等 | 深度优先、广度优先 | - |8.30✅|9.2✅|9.7|9.18||
+| [529 minesweeper](https://leetcode.com/problems/minesweeper/discuss/?currentPage=1&orderBy=most_votes&query=) | [扫雷游戏](https://leetcode-cn.com/problems/minesweeper/)| 🟡 中等 | 深度优先、广度优先 | - |8.30✅|9.2✅|9.7|9.18||
 | [55 jump-game](https://leetcode.com/problems/jump-game/discuss/?currentPage=1&orderBy=most_votes&query=) | [跳跃游戏](https://leetcode-cn.com/problems/jump-game/)| 🟡 中等 | 贪心算法 | - |8.30✅|9.3✅|9.5|9.11||
-| [33 search-in-rotated-sorted-array](https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)| 🟡 中等 | 二分查找 | - |8.30✅|9.3✅|9.5|9.11||
-| [74 search-a-2d-matrix](https://leetcode.com/problems/search-a-2d-matrix/discuss/?currentPage=1&orderBy=most_votes&query=) | [搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/)| 🟡 中等 | 二分查找 | - |8.30✅|9.3✅|9.5|9.11||
-| [153 find-minimum-in-rotated-sorted-array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)| 🟡 中等 | 二分查找 | - |8.30✅|9.3✅|9.5|9.11||
+| [33 search-in-rotated-sorted-array](https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)| 🟡 中等 | 二分查找 | - |8.30✅|9.3✅|9.6✅|9.13||
+| [74 search-a-2d-matrix](https://leetcode.com/problems/search-a-2d-matrix/discuss/?currentPage=1&orderBy=most_votes&query=) | [搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/)| 🟡 中等 | 二分查找 | - |8.30✅|9.3✅|9.7✅|9.18||
+| [153 find-minimum-in-rotated-sorted-array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)| 🟡 中等 | 二分查找 | - |8.30✅|9.3✅|9.6✅|9.13||
 | [126 word-ladder-ii](https://leetcode.com/problems/word-ladder-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [单词接龙 II](https://leetcode-cn.com/problems/word-ladder-ii/)| 🔴 困难 | 深度优先、广度优先 | - | 9.3✅|||||
 | [45 jump-game-ii](https://leetcode.com/problems/jump-game-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)| 🔴 困难 | 贪心算法 | - |9.3✅ |||||
