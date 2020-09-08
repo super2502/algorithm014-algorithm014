@@ -10,9 +10,9 @@
 
 | 题号 | 名称 | 难度 | 分类 | 备注 | #1 | #2 | #3 | #4 | #？|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [62 unique-paths](https://leetcode.com/problems/unique-paths/discuss/?currentPage=1&orderBy=most_votes&query=) | [不同路径](https://leetcode-cn.com/problems/unique-paths/)| 🟡 中等 | 数组、动态规划 | - |9.7|9.1|9.4|9.11||
-| [63 unique-paths-ii](https://leetcode.com/problems/unique-paths-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [不同路径II](https://leetcode-cn.com/problems/unique-paths-ii/)| 🟡 中等 | 数组、动态规划 | - |9.7|9.1|9.4|9.11||
-| [1143 longest-common-subsequence](https://leetcode.com/problems/longest-common-subsequence/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)| 🟡 中等 | 动态规划 | - |9.7|9.1|9.4|9.11||
+| [62 unique-paths](https://leetcode.com/problems/unique-paths/discuss/?currentPage=1&orderBy=most_votes&query=) | [不同路径](https://leetcode-cn.com/problems/unique-paths/)| 🟡 中等 | 数组、动态规划 | - |9.8✅|9.9|9.10|9.17||
+| [63 unique-paths-ii](https://leetcode.com/problems/unique-paths-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [不同路径II](https://leetcode-cn.com/problems/unique-paths-ii/)| 🟡 中等 | 数组、动态规划 | - |9.8✅|9.9|9.10|9.17||
+| [1143 longest-common-subsequence](https://leetcode.com/problems/longest-common-subsequence/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)| 🟡 中等 | 动态规划 | - |9.8✅|9.9|9.10|9.17||
 | [120 triangle](https://leetcode.com/problems/triangle/discuss/?currentPage=1&orderBy=most_votes&query=) | [三角形最小路径和](https://leetcode-cn.com/problems/triangle/)| 🟡 中等 | 数组、动态规划 | - |9.7|9.1|9.4|9.11||
 | [53 maximum-subarray](https://leetcode.com/problems/maximum-subarray/discuss/?currentPage=1&orderBy=most_votes&query=) | [最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)| 简单 | 数组、动态规划 | - |9.7|9.1|9.4|9.11||
 | [152 maximum-product-subarray](https://leetcode.com/problems/maximum-product-subarray/discuss/?currentPage=1&orderBy=most_votes&query=) | [乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/)| 🟡 中等 | 数组、动态规划 | - |9.7|9.1|9.4|9.11||
