@@ -2,6 +2,20 @@
 
 # 总结
 
+- 上三角矩阵从对角线斜向上递推, 参考312_burst-balloons
+```
+    // k为对角线方向 向右上角一层一层递推
+    for k := 0; k < n; k++ {
+        for i := 0; i < n - k ; i++ {
+            j := k + i   // 注意这里 每层的j 就是i加上层数
+            dp[i][j] = ...
+            //for l:= i+1;l<j;l++{
+            //    dp[i][j] = max(dp[i][j], dp[i][l] + dp[l][j] + nums[i]*nums[l]*nums[j])
+            //}
+        }
+    }
+```
+
 # 随笔
 
 ## 大概的一点感觉
