@@ -70,7 +70,7 @@
 
 | 题号 | 名称 | 难度 | 分类 | 备注 | #1 | #2 | #3 | #4 | #？|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [64 minimum-path-sum](https://leetcode.com/problems/minimum-path-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)| 🟡 中等 | 数组、动态规划 | - |9.7|9.1|9.4|9.11||
+| [64 minimum-path-sum](https://leetcode.com/problems/minimum-path-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)| 🟡 中等 | 数组、动态规划 | - |9.11✅|9.12|9.13|9.20||
 | [91 decode-ways](https://leetcode.com/problems/decode-ways/discuss/?currentPage=1&orderBy=most_votes&query=) | [解码方法](https://leetcode-cn.com/problems/decode-ways/)| 🟡 中等 | 字符串、动态规划 | - |9.7|9.1|9.4|9.11||
 | [221 maximal-square](https://leetcode.com/problems/maximal-square/discuss/?currentPage=1&orderBy=most_votes&query=) | [最大正方形](https://leetcode-cn.com/problems/maximal-square/)| 🟡 中等 | 动态规划 | - |9.7|9.1|9.4|9.11||
 | [621 task-scheduler](https://leetcode.com/problems/task-scheduler/discuss/?currentPage=1&orderBy=most_votes&query=) | [任务调度器](https://leetcode-cn.com/problems/task-scheduler/)| 🟡 中等 | 贪心算法、队列、数组 | - |9.7|9.1|9.4|9.11||
