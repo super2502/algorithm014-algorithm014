@@ -50,7 +50,7 @@
 
 | 题号 | 名称 | 难度 | 分类 | 备注 | #1 | #2 | #3 | #4 | #？|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [62 unique-paths](https://leetcode.com/problems/unique-paths/discuss/?currentPage=1&orderBy=most_votes&query=) | [不同路径](https://leetcode-cn.com/problems/unique-paths/)| 🟡 中等 | 数组、动态规划 | - |9.8✅|9.9|9.10|9.17||
+| [62 unique-paths](https://leetcode.com/problems/unique-paths/discuss/?currentPage=1&orderBy=most_votes&query=) | [不同路径](https://leetcode-cn.com/problems/unique-paths/)| 🟡 中等 | 数组、动态规划 | - |9.8✅|9.13✅|9.14|9.21||
 | [63 unique-paths-ii](https://leetcode.com/problems/unique-paths-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [不同路径II](https://leetcode-cn.com/problems/unique-paths-ii/)| 🟡 中等 | 数组、动态规划 | - |9.8✅|9.9|9.10|9.17||
 | [1143 longest-common-subsequence](https://leetcode.com/problems/longest-common-subsequence/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)| 🟡 中等 | 动态规划 | - |9.8✅|9.9|9.10|9.17||
 | [120 triangle](https://leetcode.com/problems/triangle/discuss/?currentPage=1&orderBy=most_votes&query=) | [三角形最小路径和](https://leetcode-cn.com/problems/triangle/)| 🟡 中等 | 数组、动态规划 | - |9.9✅|9.10|9.11|9.18||
@@ -83,4 +83,3 @@
 | [552 student-attendance-record-ii](https://leetcode.com/problems/student-attendance-record-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [学生出勤记录II](https://leetcode-cn.com/problems/student-attendance-record-ii/)| 🔴 困难  | 动态规划 | - |9.7|9.1|9.4|9.11||
 | [76 minimum-window-substring](https://leetcode.com/problems/minimum-window-substring/discuss/?currentPage=1&orderBy=most_votes&query=) | [最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)| 🔴 困难  | 双指针、滑动窗口 | - |9.7|9.1|9.4|9.11||
 | [312 burst-balloons](https://leetcode.com/problems/burst-balloons/discuss/?currentPage=1&orderBy=most_votes&query=) | [戳气球](https://leetcode-cn.com/problems/burst-balloons/)| 🔴 困难 | 分治算法、动态规划 | - |9.11✅|9.12|9.13|9.20||
-| [62 unique-paths](https://leetcode.com/problems/unique-paths/discuss/?currentPage=1&orderBy=most_votes&query=) | [不同路径](https://leetcode-cn.com/problems/unique-paths/)| 🟡 中等  | 数组、动态规划 | - |9.11✅|9.12|9.13|9.20||
