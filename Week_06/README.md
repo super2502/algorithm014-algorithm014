@@ -2,6 +2,11 @@
 
 # 总结
 
+- 做dp的题太慢了
+  - 理解就很慢，看答案理解的也慢
+  - 做一遍更慢
+  - 还没搞清楚套路，只能一个类型题记一下
+
 - 上三角矩阵从对角线斜向上递推, 参考312_burst-balloons
 ```
     // k为对角线方向 向右上角一层一层递推
@@ -71,9 +76,9 @@
 | 题号 | 名称 | 难度 | 分类 | 备注 | #1 | #2 | #3 | #4 | #？|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [64 minimum-path-sum](https://leetcode.com/problems/minimum-path-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)| 🟡 中等 | 数组、动态规划 | - |9.11✅|9.18✅|9.19|9.26||
-| [91 decode-ways](https://leetcode.com/problems/decode-ways/discuss/?currentPage=1&orderBy=most_votes&query=) | [解码方法](https://leetcode-cn.com/problems/decode-ways/)| 🟡 中等 | 字符串、动态规划 | - |9.7|9.1|9.4|9.11||
-| [221 maximal-square](https://leetcode.com/problems/maximal-square/discuss/?currentPage=1&orderBy=most_votes&query=) | [最大正方形](https://leetcode-cn.com/problems/maximal-square/)| 🟡 中等 | 动态规划 | - |9.7|9.1|9.4|9.11||
-| [621 task-scheduler](https://leetcode.com/problems/task-scheduler/discuss/?currentPage=1&orderBy=most_votes&query=) | [任务调度器](https://leetcode-cn.com/problems/task-scheduler/)| 🟡 中等 | 贪心算法、队列、数组 | - |9.7|9.1|9.4|9.11||
+| [91 decode-ways](https://leetcode.com/problems/decode-ways/discuss/?currentPage=1&orderBy=most_votes&query=) | [解码方法](https://leetcode-cn.com/problems/decode-ways/)| 🟡 中等 | 字符串、动态规划 | - |9.18✅|9.20|9.1|9.18||
+| [221 maximal-square](https://leetcode.com/problems/maximal-square/discuss/?currentPage=1&orderBy=most_votes&query=) | [最大正方形](https://leetcode-cn.com/problems/maximal-square/)| 🟡 中等 | 动态规划 | - |9.19✅|9.20|9.22|9.29||
+| [621 task-scheduler](https://leetcode.com/problems/task-scheduler/discuss/?currentPage=1&orderBy=most_votes&query=) | [任务调度器](https://leetcode-cn.com/problems/task-scheduler/)| 🟡 中等 | 贪心算法、队列、数组 | - |9.19✅|9.20|9.22|9.29||
 | [647 palindromic-substrings](https://leetcode.com/problems/palindromic-substrings/discuss/?currentPage=1&orderBy=most_votes&query=) | [回文字串](https://leetcode-cn.com/problems/palindromic-substrings/)| 🟡 中等 | 字符串、动态规划 | - |9.7|9.1|9.4|9.11||
 | [32 longest-valid-parentheses](https://leetcode.com/problems/longest-valid-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)| 🔴 困难  | 字符串、动态规划 | - |9.7|9.1|9.4|9.11||
 | [72 edit-distance](https://leetcode.com/problems/edit-distance/discuss/?currentPage=1&orderBy=most_votes&query=) | [编辑距离](https://leetcode-cn.com/problems/edit-distance/)| 🔴 困难  | 字符串、动态规划 | - |9.7|9.1|9.4|9.11||
