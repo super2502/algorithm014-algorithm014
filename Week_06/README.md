@@ -6,6 +6,10 @@
   - 理解就很慢，看答案理解的也慢
   - 做一遍更慢
   - 还没搞清楚套路，只能一个类型题记一下
+  - 两周的dp做的非常崩溃，大部分都想不出来，看了答案自己也写不出来
+  
+- 410_split-array-largest-sum 二分用通用模版搞不定
+  - 应该先学前置的二分，就是比xx小的最大值找法，只能left < right; mid <= target then right = mid 这个模版做
 
 - 上三角矩阵从对角线斜向上递推, 参考312_burst-balloons
 ```
@@ -79,12 +83,12 @@
 | [91 decode-ways](https://leetcode.com/problems/decode-ways/discuss/?currentPage=1&orderBy=most_votes&query=) | [解码方法](https://leetcode-cn.com/problems/decode-ways/)| 🟡 中等 | 字符串、动态规划 | - |9.18✅|9.20|9.1|9.18||
 | [221 maximal-square](https://leetcode.com/problems/maximal-square/discuss/?currentPage=1&orderBy=most_votes&query=) | [最大正方形](https://leetcode-cn.com/problems/maximal-square/)| 🟡 中等 | 动态规划 | - |9.19✅|9.20|9.22|9.29||
 | [621 task-scheduler](https://leetcode.com/problems/task-scheduler/discuss/?currentPage=1&orderBy=most_votes&query=) | [任务调度器](https://leetcode-cn.com/problems/task-scheduler/)| 🟡 中等 | 贪心算法、队列、数组 | - |9.19✅|9.20|9.22|9.29||
-| [647 palindromic-substrings](https://leetcode.com/problems/palindromic-substrings/discuss/?currentPage=1&orderBy=most_votes&query=) | [回文字串](https://leetcode-cn.com/problems/palindromic-substrings/)| 🟡 中等 | 字符串、动态规划 | - |9.7|9.1|9.4|9.11||
-| [32 longest-valid-parentheses](https://leetcode.com/problems/longest-valid-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)| 🔴 困难  | 字符串、动态规划 | - |9.7|9.1|9.4|9.11||
-| [72 edit-distance](https://leetcode.com/problems/edit-distance/discuss/?currentPage=1&orderBy=most_votes&query=) | [编辑距离](https://leetcode-cn.com/problems/edit-distance/)| 🔴 困难  | 字符串、动态规划 | - |9.7|9.1|9.4|9.11||
+| [647 palindromic-substrings](https://leetcode.com/problems/palindromic-substrings/discuss/?currentPage=1&orderBy=most_votes&query=) | [回文字串](https://leetcode-cn.com/problems/palindromic-substrings/)| 🟡 中等 | 字符串、动态规划 | - |9.19✅|9.20|9.22|9.29||
+| [32 longest-valid-parentheses](https://leetcode.com/problems/longest-valid-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)| 🔴 困难  | 字符串、动态规划 | - |9.19✅|9.20|9.22|9.29||
+| [72 edit-distance](https://leetcode.com/problems/edit-distance/discuss/?currentPage=1&orderBy=most_votes&query=) | [编辑距离](https://leetcode-cn.com/problems/edit-distance/)| 🔴 困难  | 字符串、动态规划 | - |9.19✅|9.20|9.22|9.29||
 | [363 max-sum-of-rectangle-no-larger-than-k](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/discuss/?currentPage=1&orderBy=most_votes&query=) | [矩形区域不超过 K 的最大数值和](https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/)| 🔴 困难  | 队列、二分查找、动态规划 | - |9.7|9.1|9.4|9.11||
-| [403 frog-jump](https://leetcode.com/problems/frog-jump/discuss/?currentPage=1&orderBy=most_votes&query=) | [青蛙过河](https://leetcode-cn.com/problems/frog-jump/)| 🔴 困难  | 动态规划 | - |9.7|9.1|9.4|9.11||
-| [410 split-array-largest-sum](https://leetcode.com/problems/split-array-largest-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [分割数组的最大值](https://leetcode-cn.com/problems/split-array-largest-sum/)| 🔴 困难  | 二分查找、动态规划 | - |9.7|9.1|9.4|9.11||
+| [403 frog-jump](https://leetcode.com/problems/frog-jump/discuss/?currentPage=1&orderBy=most_votes&query=) | [青蛙过河](https://leetcode-cn.com/problems/frog-jump/)| 🔴 困难  | 动态规划 | - |9.19✅|9.20|9.22|9.29||
+| [410 split-array-largest-sum](https://leetcode.com/problems/split-array-largest-sum/discuss/?currentPage=1&orderBy=most_votes&query=) | [分割数组的最大值](https://leetcode-cn.com/problems/split-array-largest-sum/)| 🔴 困难  | 二分查找、动态规划 | - |9.19✅|9.20|9.22|9.29||
 | [552 student-attendance-record-ii](https://leetcode.com/problems/student-attendance-record-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [学生出勤记录II](https://leetcode-cn.com/problems/student-attendance-record-ii/)| 🔴 困难  | 动态规划 | - |9.7|9.1|9.4|9.11||
 | [76 minimum-window-substring](https://leetcode.com/problems/minimum-window-substring/discuss/?currentPage=1&orderBy=most_votes&query=) | [最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)| 🔴 困难  | 双指针、滑动窗口 | - |9.7|9.1|9.4|9.11||
 | [312 burst-balloons](https://leetcode.com/problems/burst-balloons/discuss/?currentPage=1&orderBy=most_votes&query=) | [戳气球](https://leetcode-cn.com/problems/burst-balloons/)| 🔴 困难 | 分治算法、动态规划 | - |9.11✅|9.12|9.13|9.20||
