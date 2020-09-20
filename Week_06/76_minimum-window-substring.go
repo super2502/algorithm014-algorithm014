@@ -34,11 +34,11 @@ func minWindow(s string, t string) string {
 			needMap[b]++
 			//fmt.Printf("drop from i (%v)(%v), count(%v)\n", i, b, needMap[b])
 			if needMap[b] <= 0 {
-				if j-i < minLength {
-					minLength = j - i
-					i0, j0 = i, j
-					//fmt.Printf("got min i,j (%v)(%v)\n", i , j)
-				}
+				//if j-i < minLength {
+				//	minLength = j - i
+				//	i0, j0 = i, j
+				//	//fmt.Printf("got min i,j (%v)(%v)\n", i , j)
+				//}
 			} else {
 				needs++
 			}
