@@ -3,6 +3,7 @@ package Week_06
 import (
 	"container/heap"
 )
+
 //func leastInterval(tasks []byte, n int) int {
 //	taskMap := make(map[byte]int)
 //	for _, t := range tasks{
@@ -70,7 +71,6 @@ import (
 //}
 //var _ heap.Interface = &taskHeap{}
 
-
 func leastInterval(tasks []byte, n int) int {
 	taskMap := make(map[byte]int)
 	for _, task := range tasks {
@@ -79,7 +79,7 @@ func leastInterval(tasks []byte, n int) int {
 	nh := make(nodeHeap, 0)
 	for task, count := range taskMap {
 		heap.Push(&nh, &node{
-			task: task,
+			task:  task,
 			count: count,
 		})
 	}
@@ -94,12 +94,12 @@ func leastInterval(tasks []byte, n int) int {
 				break
 			}
 			roundTime++
-			taskNode := heap.Pop(&nh)
+			//taskNode := heap.Pop(&nh)
 			// runTasks = append(runTasks, taskNode)
-			taskNode.count--
-			if taskNode.count > 0 {
-				pushBackTasks = append(pushBackTasks, taskNode)
-			}
+			//taskNode.count--
+			//if taskNode.count > 0 {
+			//	pushBackTasks = append(pushBackTasks, taskNode)
+			//}
 		}
 		if len(pushBackTasks) > 0 {
 			for _, nextNode := range pushBackTasks {
@@ -115,12 +115,11 @@ func leastInterval(tasks []byte, n int) int {
 }
 
 type node struct {
-	task byte
+	task  byte
 	count int
 }
 
 type nodeHeap []*node
-
 
 func (nh *nodeHeap) Len() int {
 	return len(*nh)
@@ -139,7 +138,7 @@ func (nh *nodeHeap) Push(x interface{}) {
 }
 
 func (nh *nodeHeap) Pop() interface{} {
-	x := (*nh)[nh.Len() - 1]
-	*nh = (*nh)[:nh.Len() -1]
+	x := (*nh)[nh.Len()-1]
+	*nh = (*nh)[:nh.Len()-1]
 	return x
 }
