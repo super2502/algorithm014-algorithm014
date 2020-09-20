@@ -2,6 +2,21 @@
 
 # 总结
 
+- 模板
+
+|模板|笔记|理解|历史|
+|---|---|---|---|
+|并查集|https://shimo.im/docs/xtKGQWhYwJrCRtJP/||week07|
+|Trie树|https://shimo.im/docs/RTr33Rxtgc6tcXxv/ ||week07|
+|DFS递归|https://shimo.im/docs/9CYPpdcPGwXT93QV/|实际上回溯是带数据处理的DFS，在递归前后调用数据的处理和revert就成回溯了，另外回溯更侧重考虑剪枝|week04|
+|DFS迭代|https://shimo.im/docs/JqXDvhW9jt6Y9hQV/ |这就是树的先序遍历模板 |week04|
+|BFS|https://shimo.im/docs/VkVGpccqqxwvqtgR/|用队列|week04|
+|二分查找|https://shimo.im/docs/vkPwvRcktgHdWWdW/|细节需要研究，都是边界问题|week04|
+|回溯|https://shimo.im/docs/3c3VYtCW9kyCcGYc|模板很好用|week03|
+|单调栈单调队列|https://shimo.im/docs/hyWwqQ39xVcwk3xG/| 理解的还凑合，记得不牢|week02|
+
+
+
 # 随笔
 
 # 提交作业
@@ -18,10 +33,10 @@
 
 | 题号 | 名称 | 难度 | 分类 | 备注 | #1 | #2 | #3 | #4 | #？|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [102 binary-tree-level-order-traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)| 🟡 中等 | 树、广度优先搜索 | - |9.20|9.21|9.22|9.30||
-| [208 implement-trie-prefix-tree](https://leetcode.com/problems/implement-trie-prefix-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/)| 🟡 中等 | 设计、字典树 | - |9.20|9.21|9.22|9.30||
-| [212 word-search-ii](https://leetcode.com/problems/word-search-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [单词搜索 II](https://leetcode-cn.com/problems/word-search-ii/)| 🔴 困难   | 字典树、回溯算法 | - |9.20|9.21|9.22|9.30||
-| [547 friend-circles](https://leetcode.com/problems/friend-circles/discuss/?currentPage=1&orderBy=most_votes&query=) | [朋友圈](https://leetcode-cn.com/problems/friend-circles/)| 🟡 中等  | 深度优先搜索、并查集 | - |9.20|9.21|9.22|9.30||
+| [102 binary-tree-level-order-traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)| 🟡 中等 | 树、广度优先搜索 | - |9.20✅|9.21|9.22|9.30||
+| [208 implement-trie-prefix-tree](https://leetcode.com/problems/implement-trie-prefix-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/)| 🟡 中等 | 设计、字典树 | - |9.20✅|9.21|9.22|9.30||
+| [212 word-search-ii](https://leetcode.com/problems/word-search-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [单词搜索 II](https://leetcode-cn.com/problems/word-search-ii/)| 🔴 困难   | 字典树、回溯算法 | - |9.20✅|9.21|9.22|9.30||
+| [547 friend-circles](https://leetcode.com/problems/friend-circles/discuss/?currentPage=1&orderBy=most_votes&query=) | [朋友圈](https://leetcode-cn.com/problems/friend-circles/)| 🟡 中等  | 深度优先搜索、并查集 | - |9.20✅|9.21|9.22|9.30||
 | [200 number-of-islands](https://leetcode.com/problems/number-of-islands/discuss/?currentPage=1&orderBy=most_votes&query=) | [岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)| 🟡 中等  | 深、广度优先搜索、并查集 | - |9.20|9.21|9.22|9.30||
 | [130 surrounded-regions](https://leetcode.com/problems/surrounded-regions/discuss/?currentPage=1&orderBy=most_votes&query=) | [被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)| 🟡 中等 | 深、广度优先搜索、并查集 | - |9.20|9.21|9.22|9.30||
 | [70 climbing-stairs](https://leetcode.com/problems/climbing-stairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)| 简单 | 动态规划 | - |9.20|9.21|9.22|9.30||
