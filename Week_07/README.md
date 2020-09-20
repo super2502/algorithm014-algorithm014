@@ -10,7 +10,7 @@
 #姓名:benben
 #班级:14期1班3组
 #语言:go
-#作业&总结链接:https://github.com/super2502/algorithm014-algorithm014/tree/golang/Week_06
+#作业&总结链接:https://github.com/super2502/algorithm014-algorithm014/tree/golang/Week_07
 
 ```
 
