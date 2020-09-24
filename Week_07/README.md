@@ -52,7 +52,7 @@
 | [37 sudoku-solver](https://leetcode.com/problems/sudoku-solver/discuss/?currentPage=1&orderBy=most_votes&query=) | [解数独](https://leetcode-cn.com/problems/sudoku-solver/)| 🔴 困难 | 哈希表、回溯算法 | - |9.22✅|9.25|9.26|10.4||
 | [127 word-ladder](https://leetcode.com/problems/word-ladder/discuss/?currentPage=1&orderBy=most_votes&query=) | [单词接龙](https://leetcode-cn.com/problems/word-ladder/)| 🟡 中等 | 广度优先搜索 | - |9.20✅|9.21|9.22|9.30||
 | [433 minimum-genetic-mutation](https://leetcode.com/problems/minimum-genetic-mutation/discuss/?currentPage=1&orderBy=most_votes&query=) | [最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/)| 🟡 中等 | 广度优先搜索 | - |9.20✅|9.21|9.22|9.30||
-| [1091 shortest-path-in-binary-matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/discuss/?currentPage=1&orderBy=most_votes&query=) | [二进制矩阵中的最短路径](https://leetcode-cn.com/problems/shortest-path-in-binary-matrix/)| 🟡 中等 | 广度优先搜索 | - |9.9|9.15|9.16|9.23||
+| [1091 shortest-path-in-binary-matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/discuss/?currentPage=1&orderBy=most_votes&query=) | [二进制矩阵中的最短路径](https://leetcode-cn.com/problems/shortest-path-in-binary-matrix/)| 🟡 中等 | 广度优先搜索 | - |9.24✅|9.26|9.27|10.3||
 | [773 sliding-puzzle](https://leetcode.com/problems/sliding-puzzle/discuss/?currentPage=1&orderBy=most_votes&query=) | [滑动谜题](https://leetcode-cn.com/problems/sliding-puzzle/)| 🔴 困难 | 广度优先搜索 | - |9.9|9.15|9.16|9.23||
 
 
