@@ -16,6 +16,10 @@
 |回溯|https://shimo.im/docs/3c3VYtCW9kyCcGYc|模板很好用|week03|
 |单调栈单调队列|https://shimo.im/docs/hyWwqQ39xVcwk3xG/| 理解的还凑合，记得不牢|week02|
 
+- 还没练习过的类型
+  - 二分查找不等于的系列
+  - 
+  
 # 随笔
 
 # 提交作业
