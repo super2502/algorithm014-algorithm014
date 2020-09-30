@@ -1,10 +1,10 @@
-package main
+package Week_08
 
 import (
-	//"fmt"
+//"fmt"
 )
 
-func mergeSort(nums []int, i , j int) []int {
+func mergeSort(nums []int, i, j int) []int {
 	//fmt.Printf("loop in i(%v) j (%v) \n", i , j)
 	if i > j {
 		return []int{}
@@ -12,17 +12,17 @@ func mergeSort(nums []int, i , j int) []int {
 	if i == j {
 		return []int{nums[i]}
 	}
-	mid := i + ( j - i ) >> 1
+	mid := i + (j-i)>>1
 	left := mergeSort(nums, i, mid)
-	right := mergeSort(nums, mid + 1 , j)
+	right := mergeSort(nums, mid+1, j)
 
 	return merge(left, right)
 }
 
 func merge(left []int, right []int) []int {
-	ret := make([]int, len(left) + len(right))
+	ret := make([]int, len(left)+len(right))
 
-	i, j ,k := 0, 0 ,0
+	i, j, k := 0, 0, 0
 	for i < len(left) && j < len(right) {
 		if left[i] < right[j] {
 			ret[k] = left[i]
@@ -33,7 +33,7 @@ func merge(left []int, right []int) []int {
 		}
 		k++
 	}
-	if  i == len(left) {
+	if i == len(left) {
 		for j < len(right) {
 			ret[k] = right[j]
 			j++

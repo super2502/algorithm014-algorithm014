@@ -2,7 +2,7 @@ package Week_08
 
 import "sort"
 
-func merge(intervals [][]int) [][]int {
+func merge56(intervals [][]int) [][]int {
 	ret := make([][]int, 0)
 	if len(intervals) < 2 {
 		return intervals
