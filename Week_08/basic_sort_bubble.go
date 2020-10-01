@@ -1,12 +1,23 @@
 package Week_08
 
-func bubbleSort(nums []int) []int {
-	for i:= 0; i< len(nums);i++ {
-		for j:=1 ;j<len(nums) - i ;j++ {
+import "fmt"
+
+func bubbleSort(nums []int) {
+	loop := 0
+	swap := 0
+	for i := 0; i < len(nums); i++ {
+		done := true
+		for j := 1; j < len(nums)-i; j++ {
+			loop++
 			if nums[j] < nums[j-1] {
 				nums[j], nums[j-1] = nums[j-1], nums[j]
+				done = false
+				swap++
 			}
 		}
+		if done {
+			break
+		}
 	}
-	return nums
+	fmt.Printf("loop (%v) times, swap (%v) times\n", loop, swap)
 }

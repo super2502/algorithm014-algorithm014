@@ -4,49 +4,41 @@ import (
 //"fmt"
 )
 
-func mergeSort(nums []int, i, j int) []int {
+func mergeSort(nums []int, left, right int) {
 	//fmt.Printf("loop in i(%v) j (%v) \n", i , j)
-	if i > j {
-		return []int{}
+	if left >= right {
+		return
 	}
-	if i == j {
-		return []int{nums[i]}
-	}
-	mid := i + (j-i)>>1
-	left := mergeSort(nums, i, mid)
-	right := mergeSort(nums, mid+1, j)
 
-	return merge(left, right)
+	mid := left + (right-left)>>1
+	mergeSort(nums, left, mid)
+	mergeSort(nums, mid+1, right)
+	merge(nums, left, mid, right)
 }
 
-func merge(left []int, right []int) []int {
-	ret := make([]int, len(left)+len(right))
+func merge(nums []int, left, mid, right int) {
 
-	i, j, k := 0, 0, 0
-	for i < len(left) && j < len(right) {
-		if left[i] < right[j] {
-			ret[k] = left[i]
+	tmp := make([]int, right-left+1)
+	i, j, k := left, mid+1, 0
+	for i <= mid && j <= right {
+		if nums[i] < nums[j] {
+			tmp[k] = nums[i]
 			i++
 		} else {
-			ret[k] = right[j]
+			tmp[k] = nums[j]
 			j++
 		}
 		k++
 	}
-	if i == len(left) {
-		for j < len(right) {
-			ret[k] = right[j]
-			j++
-			k++
-		}
+	for j <= right {
+		tmp[k] = nums[j]
+		j++
+		k++
 	}
-	if j == len(right) {
-		for i < len(left) {
-			ret[k] = left[i]
-			i++
-			k++
-		}
+	for i <= mid {
+		tmp[k] = nums[i]
+		i++
+		k++
 	}
-
-	return ret
+	copy(nums[left:right+1], tmp)
 }
