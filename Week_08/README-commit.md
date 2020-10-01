@@ -53,5 +53,6 @@
 | [56 merge-intervals](https://leetcode.com/problems/merge-intervals/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并区间](https://leetcode-cn.com/problems/merge-intervals/)| 🟡 中等 | 排序、数组 | - |9.29✅|9.30|10.1|10.8||
 | [51 n-queens](https://leetcode.com/problems/n-queens/discuss/?currentPage=1&orderBy=most_votes&query=) | [N 皇后](https://leetcode-cn.com/problems/n-queens/)| 🔴 困难 | 回溯算法、位运算 | - |9.26|9.27|9.29|10.4||
 | [52 n-queens-ii](https://leetcode.com/problems/n-queens-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [N皇后 II](https://leetcode-cn.com/problems/n-queens-ii/)| 🔴 困难| 回溯算法、位运算 | - |9.26|9.27|9.29|10.4||
-| [493 reverse-pairs](https://leetcode.com/problems/reverse-pairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [翻转对](https://leetcode-cn.com/problems/reverse-pairs/)| 🔴 困难 | 排序、分治算法 | - |9.26|9.27|9.29|10.4||
+| [493 reverse-pairs](https://leetcode.com/problems/reverse-pairs/discuss/?currentPage=1&orderBy=most_votes&query=) | [翻转对](https://leetcode-cn.com/problems/reverse-pairs/)| 🔴 困难 | 排序、分治算法 | - |9.30|10.1|10.2|10.8||
+| [338 counting-bits](https://leetcode.com/problems/counting-bits/discuss/?currentPage=1&orderBy=most_votes&query=) | [比特位计数](https://leetcode-cn.com/problems/counting-bits/)| 🟡 中等 | 位运算、动态规划 | - |9.26|9.27|9.29|10.4||
 
