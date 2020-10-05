@@ -25,6 +25,11 @@
 |回溯|https://shimo.im/docs/3c3VYtCW9kyCcGYc|模板很好用|week03|
 |单调栈单调队列|https://shimo.im/docs/hyWwqQ39xVcwk3xG/| 理解的还凑合，记得不牢|week02|
 
+- 某些场景可以显著优化性能的点
+  - golang遍历字符串时，直接for string比for []byte(string)要快，注意range string得到的是rune，要得到byte需要用string\[i]
+  - 给map，slice设置capacity，减少扩容次数
+  - 剪枝、双向BFS什么的大套路
+  
 - 还没练习过的类型
   - 二分查找不等于的系列
   - 
