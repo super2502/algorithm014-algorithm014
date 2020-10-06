@@ -30,9 +30,10 @@
   - 给map，slice设置capacity，减少扩容次数
   - 剪枝、双向BFS什么的大套路
   
-- 还没练习过的类型
+- 还没练习过的类型以及需要找时间仔细分析的东西
   - 二分查找不等于的系列
-  - 
+  - 归并排序的复杂度计算方式
+  - 快排的复杂度计算方式
   
 # 随笔
 
@@ -91,5 +92,6 @@
 | 题号 | 名称 | 难度 | 分类 | 备注 | #1 | #2 | #3 | #4 | #？|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [148 sort-list](https://leetcode.com/problems/sort-list/discuss/?currentPage=1&orderBy=most_votes&query=) | [排序链表](https://leetcode-cn.com/problems/sort-list/)| 🟡 中等 | 排序、链表 | 把递归改为迭代以降低空间复杂度 |  | | | ||
+| [23 merge-k-sorted-lists](https://leetcode.com/problems/merge-k-sorted-lists/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)| 🔴️ 困难 | 排序、链表 | 堆、链表、分治算法 | 试试用堆做一遍 | | | ||
 
 
