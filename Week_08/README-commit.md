@@ -34,6 +34,9 @@
   - 二分查找不等于的系列
   - 归并排序的复杂度计算方式
   - 快排的复杂度计算方式
+
+- 算法系列，有时间阅读
+  - Deer系列: https://leetcode-cn.com/problems/longest-consecutive-sequence/solution/tao-lu-jie-jue-zui-chang-zi-xu-lie-deng-yi-lei-wen/
   
 # 随笔
 
