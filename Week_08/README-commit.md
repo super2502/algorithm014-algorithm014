@@ -32,7 +32,8 @@
   
 - 还没练习过的类型以及需要找时间仔细分析的东西
   - 二分查找不等于的系列
-    - 二分查找
+    - 二分查找最后一个小于等于目标的位置
+    - 二分查找第一个大于等于目标的位置
   - 归并排序的复杂度计算方式
   - 快排的复杂度计算方式
 
@@ -98,5 +99,9 @@
 | [148 sort-list](https://leetcode.com/problems/sort-list/discuss/?currentPage=1&orderBy=most_votes&query=) | [排序链表](https://leetcode-cn.com/problems/sort-list/)| 🟡 中等 | 排序、链表 | 把递归改为迭代以降低空间复杂度 |  | | | ||
 | [23 merge-k-sorted-lists](https://leetcode.com/problems/merge-k-sorted-lists/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)| 🔴️ 困难 | 排序、链表 | 堆、链表、分治算法 | 试试用堆做一遍 | | | ||
 | [300 longest-increasing-subsequence](https://leetcode.com/problems/longest-increasing-subsequence/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)| 🟡 中等 | 二分查找、动态规划 | 数组套路，背背 | | | | ||
+| [16.16 sub-sort-lcci](https://leetcode.com/problems/sub-sort-lcci/discuss/?currentPage=1&orderBy=most_votes&query=) | [部分排序](https://leetcode-cn.com/problems/sub-sort-lcci/)| 🟡 中等 | 排序、数组 | 数组套路，背背 | | | | ||
+| [456 132-pattern](https://leetcode.com/problems/132-pattern/discuss/?currentPage=1&orderBy=most_votes&query=) | [132模式](https://leetcode-cn.com/problems/132-pattern/)| 🟡 中等 | 栈 | 单调栈练习 | | | | ||
+| [394 decode-string](https://leetcode.com/problems/decode-string/discuss/?currentPage=1&orderBy=most_votes&query=) | [字符串解码](https://leetcode-cn.com/problems/decode-string/)| 🟡 中等 | 栈、递归 |  | | | | ||
+
 
 
