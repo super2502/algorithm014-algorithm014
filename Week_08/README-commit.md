@@ -96,5 +96,6 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [148 sort-list](https://leetcode.com/problems/sort-list/discuss/?currentPage=1&orderBy=most_votes&query=) | [排序链表](https://leetcode-cn.com/problems/sort-list/)| 🟡 中等 | 排序、链表 | 把递归改为迭代以降低空间复杂度 |  | | | ||
 | [23 merge-k-sorted-lists](https://leetcode.com/problems/merge-k-sorted-lists/discuss/?currentPage=1&orderBy=most_votes&query=) | [合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)| 🔴️ 困难 | 排序、链表 | 堆、链表、分治算法 | 试试用堆做一遍 | | | ||
+| [300 longest-increasing-subsequence](https://leetcode.com/problems/longest-increasing-subsequence/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)| 🟡 中等 | 二分查找、动态规划 | 数组套路，背背 | | | | ||
 
 
