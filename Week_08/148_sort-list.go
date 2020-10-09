@@ -9,19 +9,19 @@ func sortList(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
 	}
-	return mergeSortList(head)
+	return mergeSortList0(head)
 }
 
-func mergeSortList(head *ListNode) *ListNode {
+func mergeSortList0(head *ListNode) *ListNode {
 	if head.Next == nil {
 		return head
 	}
 	mid := findMid(head)
 	right := mid.Next
 	mid.Next = nil
-	head = mergeSortList(head)
-	right = mergeSortList(right)
-	return mergeList(head, right)
+	head = mergeSortList0(head)
+	right = mergeSortList0(right)
+	return mergeList0(head, right)
 }
 
 func findMid(head *ListNode) *ListNode {
@@ -33,7 +33,7 @@ func findMid(head *ListNode) *ListNode {
 	return slow
 }
 
-func mergeList(left, right *ListNode) *ListNode {
+func mergeList0(left, right *ListNode) *ListNode {
 	if left == nil {
 		return right
 	}
