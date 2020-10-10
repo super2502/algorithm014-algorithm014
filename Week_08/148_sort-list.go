@@ -41,10 +41,10 @@ func mergeList0(left, right *ListNode) *ListNode {
 		return left
 	}
 	if left.Val < right.Val {
-		left.Next = mergeList(left.Next, right)
+		left.Next = mergeList0(left.Next, right)
 		return left
 	} else {
-		right.Next = mergeList(left, right.Next)
+		right.Next = mergeList0(left, right.Next)
 		return right
 	}
 }
