@@ -34,6 +34,13 @@
 
 # 随笔
 
+- 学习专题
+  - 背包九讲 http://www2.lssh.tp.edu.tw/~hlf/class-1/lang-c/DP.pdf
+  - 算法系列，有时间阅读
+    - Deer系列: https://leetcode-cn.com/problems/longest-consecutive-sequence/solution/tao-lu-jie-jue-zui-chang-zi-xu-lie-deng-yi-lei-wen/
+  - 正则表达式、通配符匹配算法
+  - KMP算法
+
 # 提交作业
 
 ```
