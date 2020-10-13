@@ -58,7 +58,6 @@
 | [1143 longest-common-subsequence](https://leetcode.com/problems/longest-common-subsequence/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)| 🟡 中等| 动态规划 | - |10.11✅|10.12|10.17|10.24||
 | [72 edit-distance](https://leetcode.com/problems/edit-distance/discuss/?currentPage=1&orderBy=most_votes&query=) | [编辑距离](https://leetcode-cn.com/problems/edit-distance/)| 🔴 困难 | 字符串、动态规划 | - |10.11✅|10.12|10.17|10.24||
 | [5 longest-palindromic-substring](https://leetcode.com/problems/longest-palindromic-substring/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)|🟡 中等| 字符串、动态规划 | - |10.11✅|10.12|10.17|10.24||
-| [10 regular-expression-matching](https://leetcode.com/problems/regular-expression-matching/discuss/?currentPage=1&orderBy=most_votes&query=) | [正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)| 🔴 困难| 字符串、动态规划、回溯算法 | - |10.11|10.12|10.17|10.24||
 | [773 sliding](https://leetcode.com/problems/sliding/discuss/?currentPage=1&orderBy=most_votes&query=) | [题目模板](https://leetcode-cn.com/problems/sliding/)| 🔴 困难 🟡 中等 简单| 广度优先搜索 | - |10.11✅|10.12|10.17|10.24||
 
 # HomeWork
@@ -80,8 +79,9 @@
 | [5 longest-palindromic-substring](https://leetcode.com/problems/longest-palindromic-substring/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)| 🟡 中等 | 字符串 | - |10.11✅|10.12|10.17|10.24||
 | [32 longest-valid-parentheses](https://leetcode.com/problems/longest-valid-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=) | [最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)| 🔴 困难 | 字符串、动态规划 | - |10.11✅|10.12|10.17|10.24||
 | [818 race-car](https://leetcode.com/problems/race-car/discuss/?currentPage=1&orderBy=most_votes&query=) | [赛车](https://leetcode-cn.com/problems/race-car/)| 🔴 困难| 动态规划 | - |10.11|10.12|10.17|10.24||
-| [44 wildcard-matching](https://leetcode.com/problems/wildcard-matching/discuss/?currentPage=1&orderBy=most_votes&query=) | [通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/)| 🔴 困难|  贪心算法、字符串、动态规划、回溯算法  | - |10.11|10.12|10.17|10.24||
-| [115 distinct-subsequences](https://leetcode.com/problems/distinct-subsequences/discuss/?currentPage=1&orderBy=most_votes&query=) | [不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)| 🔴 困难| 字符串、动态规划 | - |10.11|10.12|10.17|10.24||
+| [10 regular-expression-matching](https://leetcode.com/problems/regular-expression-matching/discuss/?currentPage=1&orderBy=most_votes&query=) | [正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)| 🔴 困难| 字符串、动态规划、回溯算法 | - |10.13✅|10.14|10.17|10.24||
+| [44 wildcard-matching](https://leetcode.com/problems/wildcard-matching/discuss/?currentPage=1&orderBy=most_votes&query=) | [通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/)| 🔴 困难|  贪心算法、字符串、动态规划、回溯算法  | - |10.13✅|10.14|10.17|10.24||
+| [115 distinct-subsequences](https://leetcode.com/problems/distinct-subsequences/discuss/?currentPage=1&orderBy=most_votes&query=) | [不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)| 🔴 困难| 字符串、动态规划 | - |10.13✅|10.14|10.17|10.24||
 
 
 # 常错和容易忘记的题
