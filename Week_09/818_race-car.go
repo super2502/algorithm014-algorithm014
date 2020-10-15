@@ -19,8 +19,8 @@ func racecar(target int) int {
 				meters[nextWp] = meters[wp] + 1
 			}
 		} else {
-			fromLeft := meters[wp] + 1 + meters[i-wp]
-			fromRight := meters[wp] + 1 + 2 + meters[nextWp - i]
+			fromLeft := meters[wp] + 2 + meters[i-wp]
+			fromRight := meters[wp] + 1 + 1 + meters[nextWp - i]
 			meters[i] = min(fromLeft, fromRight)
 		}
 	}
