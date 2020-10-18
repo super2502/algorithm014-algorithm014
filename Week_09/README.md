@@ -52,6 +52,7 @@
    - 套路： 一个字符串双指针dp和一个数组双指针dp一样，状态以ij表示，模式就是一般倒推一个上三角矩阵
    - 题目：
       - [最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+      - 一个相同解题模板的题，但本质上貌似没啥关系 [戳气球](https://leetcode-cn.com/problems/burst-balloons/)
 
 - 实用库方法，既是单题也是其他题目的关键步骤
 
