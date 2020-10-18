@@ -4,6 +4,7 @@
 
 - 高级动态规划
   - 理论知识：
+    - 看这个图 https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zhong-xin-kuo-san-dong-tai-gui-hua-by-liweiwei1419/
     - 模型：多阶段决策最优解
     - 特征：
       - 最优子结构： 可以通过子问题最优解，推导出问题最优解 (当dp仅做备忘录时，无所谓最优解，仅有一解，要的是递推关系)
@@ -15,7 +16,13 @@
     - 自上而下得出如何实现一个备忘录，以至于在使用回溯dfs时，已经得到的状态解无需再次计算，这样使用的回溯+备忘录已经是一种dp了
     - 备忘录里的key一般就可以抽象为dp的状态维度，如果能从key得出较为直观的状态，那么就可以自下而上的得出一套推导方程，即dp方程，进而得到迭代递推形式的dp解法
   - 一些优秀的思考过程的例子
+    - 一般一旦一个dp可解问题给出了状态，绘制出状态转移表进而推导出状态转移方程相对就容易很多了
+    - 最困难的是怎么定义状态
+    - 以下题解非常清晰的解释了思考过程，看看能不能从中再向上总结出更高层次的东西来
+      - 从递归树到回溯备忘录再到dp https://leetcode-cn.com/problems/partition-equal-subset-sum/solution/cong-er-cha-shu-dao-dong-gui-yi-chong-chao-hao-li-/
   
+  - 其他：
+    - 关于子串，子序列，子数组： 先弄清意图，是否连续，是否保持原顺序，都是很关键的条件。
 
 - 字符串算法
   - 非dp相关
