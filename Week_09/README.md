@@ -20,6 +20,7 @@
     - 最困难的是怎么定义状态
     - 以下题解非常清晰的解释了思考过程，看看能不能从中再向上总结出更高层次的东西来
       - 从递归树到回溯备忘录再到dp https://leetcode-cn.com/problems/partition-equal-subset-sum/solution/cong-er-cha-shu-dao-dong-gui-yi-chong-chao-hao-li-/
+      - 回溯到备忘录 https://leetcode-cn.com/problems/burst-balloons/solution/dui-fen-zhi-fa-ti-jie-de-jie-du-by-chuck-bass/
   
   - 其他：
     - 关于子串，子序列，子数组： 先弄清意图，是否连续，是否保持原顺序，都是很关键的条件。
