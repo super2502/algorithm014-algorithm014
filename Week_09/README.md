@@ -41,6 +41,7 @@
       - [正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)
       - [通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/)
       - [不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)
+      - [1035. 不相交的线](https://leetcode-cn.com/problems/uncrossed-lines/submissions/) 换了个皮儿
  - 回文字符串
    - 特点： 就是回文字符串
    - 解法： 如果不用马拉车算法，就使用ij双指针dp法
