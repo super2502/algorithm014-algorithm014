@@ -1,4 +1,4 @@
-package main
+package Week_10
 
 import (
 	"testing"
@@ -9,6 +9,5 @@ func TestDropEgg(t *testing.T) {
 	cnt := 2
 	ret := dropEggs(level, cnt)
 
-
-	t.Logf("level %v, eggs %v, expect %v, yours %v", level, cnt, 14,ret)
+	t.Logf("level %v, eggs %v, expect %v, yours %v", level, cnt, 14, ret)
 }

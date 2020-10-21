@@ -1,4 +1,4 @@
-package main
+package Week_10
 
 import (
 	"fmt"
@@ -6,7 +6,9 @@ import (
 
 func dropEggs(level, cnt int) int {
 
-	if level == 0 || cnt == 0 { return 0 }
+	if level == 0 || cnt == 0 {
+		return 0
+	}
 	eb := make([][]int, cnt)
 	for i := 0; i < cnt; i++ {
 		eb[i] = make([]int, level)
@@ -14,18 +16,18 @@ func dropEggs(level, cnt int) int {
 	for j := 0; j < level; j++ {
 		eb[0][j] = j + 1
 	}
-	for i := 1; i < cnt ; i++ {
+	for i := 1; i < cnt; i++ {
 		eb[i][0] = 1
 		for j := 1; j < level; j++ {
 			minCnt := level
-			for k := 0; k <= j ; k++ {
+			for k := 0; k <= j; k++ {
 				//fmt.Printf("j: %v, k:%v, line(%+v)\n", j, k, eb[1])
 				if k == 0 {
-					minCnt = min(minCnt, 1 + eb[i][j-k-1])
+					minCnt = min(minCnt, 1+eb[i][j-k-1])
 				} else if k == j {
-					minCnt = min(minCnt, 1 + eb[i-1][k-1])
+					minCnt = min(minCnt, 1+eb[i-1][k-1])
 				} else {
-					minCnt = min(minCnt, 1 + max(eb[i][j-k-1], eb[i-1][k-1]))
+					minCnt = min(minCnt, 1+max(eb[i][j-k-1], eb[i-1][k-1]))
 				}
 			}
 			eb[i][j] = minCnt
