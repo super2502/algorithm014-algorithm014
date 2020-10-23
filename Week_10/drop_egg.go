@@ -1,9 +1,5 @@
 package Week_10
 
-import (
-	"fmt"
-)
-
 func dropEggs(level, cnt int) int {
 
 	if level == 0 || cnt == 0 {
@@ -33,9 +29,9 @@ func dropEggs(level, cnt int) int {
 			eb[i][j] = minCnt
 		}
 	}
-	for i := 0; i < cnt; i++ {
-		fmt.Printf("1egg: %+v\n", eb[i])
-	}
+	//for i := 0; i < cnt; i++ {
+	//	fmt.Printf("1egg: %+v\n", eb[i])
+	//}
 	return eb[cnt-1][level-1]
 }
 
