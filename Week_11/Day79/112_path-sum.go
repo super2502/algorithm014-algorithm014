@@ -1,4 +1,4 @@
-package Day79_107
+package Day79
 
 func hasPathSum(root *TreeNode, sum int) bool {
 	if root == nil {

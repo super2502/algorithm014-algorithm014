@@ -1,4 +1,4 @@
-package Day79_107
+package Day79
 
 func findTheDifference(s string, t string) byte {
 	sm := [26]int{}

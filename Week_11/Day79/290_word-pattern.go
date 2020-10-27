@@ -1,4 +1,4 @@
-package Day79_107
+package Day79
 
 import "strings"
 
