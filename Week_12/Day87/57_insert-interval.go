@@ -14,7 +14,7 @@ func insert1(array [][]int, rang []int) [][]int {
 		return ret
 	}
 	mid[0] = min(array[i][0], rang[0])
-	for i < n && array[i][0] < rang[1] {
+	for i < n && array[i][0] <= rang[1] {
 		i++
 	}
 	if i == 0 {
