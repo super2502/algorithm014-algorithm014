@@ -1,5 +1,45 @@
 package Day87
 
+func insert1(array [][]int, rang []int) [][]int {
+	i, n := 0, len(array)
+	ret := make([][]int, 0)
+	mid := make([]int, 2)
+
+	for i < n && array[i][1] < rang[0] {
+		i++
+	}
+	ret = append(ret, array[:i]...)
+	if i == n {
+		ret = append(ret, rang)
+		return ret
+	}
+	mid[0] = min(array[i][0], rang[0])
+	for i < n && array[i][0] < rang[1] {
+		i++
+	}
+	if i == 0 {
+		ret = append([][]int{rang}, array[i:]...)
+		return ret
+	}
+	mid[1] = max(array[i-1][1], rang[1])
+	ret = append(ret, mid)
+	ret = append(ret, array[i:]...)
+	return ret
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+
 func insert(intervals [][]int, newInterval []int) [][]int {
 	if len(intervals) == 0 {
 		return [][]int{newInterval}
