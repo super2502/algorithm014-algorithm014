@@ -2,10 +2,9 @@ package main
 
 import (
 	"math"
-	"fmt"
 )
 
-func perfect(rectangles [][]int) bool {
+func isRectangleCover(rectangles [][]int) bool {
 
 	minX, minY := math.MaxInt64, math.MaxInt64
 	maxX, maxY := math.MinInt64, math.MinInt64
@@ -21,11 +20,11 @@ func perfect(rectangles [][]int) bool {
 		maxY = max(maxY, rec[3])
 	}
 
-	fmt.Printf("(%v)(%v)(%v)(%v)\n", minX, minY, maxX, maxY)
+	//fmt.Printf("(%v)(%v)(%v)(%v)\n", minX, minY, maxX, maxY)
 
-	area := make([][]int, maxX )
-	for i:=0; i<len(area);i++{
-		area[i] = make([]int, maxY )
+	area := make([][]int, maxX-minX)
+	for i := 0; i < len(area); i++ {
+		area[i] = make([]int, maxY-minY)
 	}
 
 	for _, rec := range rectangles {
@@ -37,16 +36,15 @@ func perfect(rectangles [][]int) bool {
 		if y0 > y1 {
 			y0, y1 = y1, y0
 		}
-		for x := x0; x < x1 ; x++ {
+		for x := x0; x < x1; x++ {
 			for y := y0; y < y1; y++ {
-				//fmt.Printf("x (%v)(%v-%v), y(%v)(%v-%v)\n", x, x0, x1,y,  y0, y1)
-				area[x][y]++
+				area[x-minX][y-minY]++
 			}
 		}
 
 	}
-	for i:=minX; i<len(area);i++{
-		for j:=minY; j<len(area[0]); j++ {
+	for i := 0; i < len(area); i++ {
+		for j := 0; j < len(area[0]); j++ {
 			if area[i][j] != 1 {
 				return false
 			}
