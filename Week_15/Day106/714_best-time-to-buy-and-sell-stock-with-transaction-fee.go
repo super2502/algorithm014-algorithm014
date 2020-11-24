@@ -1,4 +1,4 @@
-package Week_15
+package Day106
 
 func maxProfit(prices []int, fee int) int {
 	n := len(prices)

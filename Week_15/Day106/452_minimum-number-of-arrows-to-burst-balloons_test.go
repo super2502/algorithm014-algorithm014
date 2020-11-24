@@ -1,4 +1,4 @@
-package Week_15
+package Day106
 
 import "testing"
 
