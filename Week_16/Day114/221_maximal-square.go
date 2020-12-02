@@ -9,19 +9,21 @@ func maximalSquare(matrix [][]byte) int {
 	if n == 0 {
 		return 0
 	}
-	dp := make([][]int, m+1)
+	dp := make([]int, n+1)
 	maxEdge := 0
-	for i := 0; i <= m; i++ {
-		dp[i] = make([]int, n+1)
-		if i == 0 {
-			continue
-		}
+	for i := 1; i <= m; i++ {
+		leftUp := 0
 		for j := 1; j <= n; j++ {
+			tmp := dp[j]
 			if matrix[i-1][j-1] == '1' {
-				dp[i][j] = min(dp[i-1][j-1], min(dp[i-1][j], dp[i][j-1])) + 1
-				maxEdge = max(maxEdge, dp[i][j])
+				dp[j] = min(leftUp, min(dp[j], dp[j-1])) + 1
+				maxEdge = max(maxEdge, dp[j])
+			} else {
+				dp[j] = 0
 			}
+			leftUp = tmp
 		}
+		//fmt.Printf("%+v\n", dp)
 	}
 	return maxEdge * maxEdge
 }
