@@ -1,9 +1,5 @@
 package Day160
 
-import (
-	"math"
-)
-
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -11,7 +7,6 @@ type TreeNode struct {
 }
 
 func rightSideView(root *TreeNode) []int {
-	math.MinInt64
 	ret := make([]int, 0)
 	if root == nil {
 		return ret
